@@ -1,0 +1,194 @@
+* {
+    -webkit-tap-highlight-color:    rgba(0,0,0,0);
+    -webkit-box-sizing:             border-box;
+    -moz-box-sizing:                border-box;
+    box-sizing:                     border-box;
+}
+
+
+
+/* Normalizing elements */
+body, menu, h1, h2, a, section, aside, main, div, p, ul, li, form, input, button, fieldset {
+    margin:                         0;
+    padding:                        0;
+}
+
+ul {
+    list-style:                     none;
+}
+
+
+/* Global styles */
+body {
+    font:                           100% sans-serif;                                                    /* ~16px; */
+    line-height:                    1.5;
+    -webkit-text-size-adjust:       none;
+}
+
+.front .title {
+    font-family:                    'Asap', sans-serif;
+    text-align:                     right;
+    color:                          rgb(0,0,0);
+}
+.front h1.title{
+    font-size:                      2.3em;
+}
+.front h2.title{
+    font-size:                      1.525em;
+}
+
+
+.front {
+    background-repeat:              no-repeat;
+    background-position:            top center;
+    background-color:               rgb(0,0,0);
+}
+
+.logo {
+    position:                       absolute;
+    top:                            10px;
+    left:                           30%;
+    width:                          40%;
+    height:                         120px;
+    background-image:               url("../gfx/wr_logo.svg");
+    background-repeat:              no-repeat;
+    background-position:            top center;
+    z-index:                        1000;
+}
+
+.front .menu {
+    position:                       absolute;
+    top:                            0;
+    height:                         80px;
+    width:                          100%;
+    font-family:                    'Asap', sans-serif;
+}
+
+
+.front .menu a {
+    background:                     rgba(255, 255, 255, 0.4);
+    color:                          rgb(255,255,255);
+    margin-top:                     45px;
+    padding-top:                    6px;
+    padding-bottom:                 6px;
+    padding-left:                   12px;
+    padding-right:                  12px;
+    text-decoration:                none;
+    display:                        table-cell;
+    border-radius:                  4px;
+}
+
+.front .menu .left {
+    position:                       absolute;
+    top:                            0;
+    left:                           0;
+    width:                          30%;
+    height:                         80px;
+}
+.front .menu .left a {
+    float:                          right;
+    margin-left:                    4px;
+}
+
+.front .menu .right {
+    position:                       absolute;
+    top:                            0;
+    right:                          0;
+    width:                          30%;
+    height:                         80px;
+}
+
+.front .menu .right a {
+    float:                          left;
+    margin-right:                   4px;
+}
+
+.front .main {
+    position:                       absolute;
+    top:                            80px;
+    bottom:                         300px;
+    display:                        block;
+    width:                          100%;
+}
+
+.front .foot {
+    position:                       absolute;
+    bottom:                         0;
+    height:                         300px;
+    width:                          100%;
+    background:                     rgba(255,255,255,0.8);
+}
+
+.front .foot section {
+    width:                          75%;
+    height:                         300px;
+    float:                          left;
+}
+
+.front .foot aside {
+    width:                          25%;
+    padding:                        20px;
+    height:                         300px;
+    float:                          right;
+
+}
+
+.front .foot aside div {
+    height:                         260px;
+    padding-left:                   20px;
+    overflow:                       hidden;
+    border-left:                    1px solid rgb(140,140,140);
+}
+
+
+.front .speaker {
+    position:                       absolute;
+    display:                        block;
+    border:                         6px solid rgb(178,128,89);
+    border-radius:                  90px;
+    background:                     rgb(255,255,255);
+    background-repeat:              no-repeat;
+    background-position:            top center;
+}
+
+
+
+.front .garann {
+    background-image:               url("../gfx/speaker_garann.jpg");
+    height:                         180px;
+    width:                          180px;
+    top:                            20%;
+    left:                           20%;
+}
+
+.front .robert {
+    background-image:               url("../gfx/speaker_robert.jpg");
+    height:                         180px;
+    width:                          180px;
+    top:                            30%;
+    left:                           40%;
+}
+
+.front .garann {
+    background-image:               url("../gfx/speaker_garann.jpg");
+    height:                         180px;
+    width:                          180px;
+    top:                            20%;
+    left:                           20%;
+}
+
+.front .david {
+    background-image:               url("../gfx/speaker_robert.jpg");
+    height:                         180px;
+    width:                          180px;
+    top:                            70%;
+    left:                           60%;
+}
+
+.front .magnars {
+    background-image:               url("../gfx/speaker_robert.jpg");
+    height:                         180px;
+    width:                          180px;
+    top:                            10%;
+    left:                           80%;
+}

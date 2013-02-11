@@ -12,19 +12,25 @@ var http                = require('http'),
 // Configure application
 
 app.disable('x-powered-by');
+app.use(express.static(docRoot));
 
 app.configure('all',function () {
     app.use(express.compress());
-    app.use(express.static(docRoot));
 });
 
+app.set('views', 'views');
+app.set('view engine', 'ejs');
 
 
 // Start http server
-
+app.get('/', function(req, res){
+	res.render('frontpage', { pageTitle: 'Web Rebels Conference 2013' });
+});
+app.get('/sponsors', function(req,res){
+	res.render('sponsors', {pageTitle: 'Sponsoring options for the Web Rebels Conference 2013'})
+});
 httpServer.listen(port);
 console.info('WR2013 is running at http://localhost:' + port + '/');
-
 
 
 // Prevent exceptions to bubble up to the top and eventually kill the server

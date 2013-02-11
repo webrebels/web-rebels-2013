@@ -35,6 +35,7 @@
   "licenses": [],
   "subdomain": "wr2013",
   "dependencies": {
-    "express": "3.x"
+    "express": "3.x",
+    "ejs": "*"
   }
 }

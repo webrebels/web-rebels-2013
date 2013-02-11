@@ -23,6 +23,8 @@ body {
     font:                           100% sans-serif;                                                    /* ~16px; */
     line-height:                    1.5;
     -webkit-text-size-adjust:       none;
+    background-color:               rgb(0,0,0);
+    color:                          rgb(255,255,255);
 }
 
 .front .title {
@@ -41,7 +43,6 @@ body {
 .front {
     background-repeat:              no-repeat;
     background-position:            top center;
-    background-color:               rgb(0,0,0);
 }
 
 .logo {

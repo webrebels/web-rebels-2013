@@ -29,6 +29,15 @@ app.get('/', function(req, res){
 app.get('/sponsors', function(req,res){
 	res.render('sponsors', {pageTitle: 'Sponsoring options for the Web Rebels ☠ Oslo 2013'})
 });
+app.get('/about', function(req,res){
+	res.render('about', {pageTitle: '☠ About the Web Rebels ☠'})
+});
+app.get('/tickets', function(req,res){
+	res.render('tickets', {pageTitle: 'Tickets for the Web Rebels ☠ Oslo 2013'})
+});
+app.get('/location', function(req,res){
+	res.render('location', {pageTitle: 'Location of the Web Rebels ☠ Oslo 2013'})
+});
 app.get('/openmic', function(req,res){
 	res.render('openmic', {pageTitle: 'Open Mic Night - Web Rebels ☠ Oslo 2013'})
 });

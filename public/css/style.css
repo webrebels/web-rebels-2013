@@ -63,6 +63,103 @@ table.simple th, table.simple td {
     text-align: left;
 }
 
+/** Map and image box styles **/
+.imagebox,
+.mapbox {
+    position:               relative;
+    background-color:       rgb(19,19,19);
+    width:                  220px;
+    border-radius:          3px;
+    border-bottom:          1px solid rgb(0,0,0);
+}
+.imagebox .img {
+    height:                 142px;
+    cursor:                 pointer;
+    -webkit-transition:     background-image 400ms ease-in;
+    -moz-transition:        background-image 400ms ease-in;
+    -ms-transition:         background-image 400ms ease-in;
+    -o-transition:          background-image 400ms ease-in;
+    transition:             background-image 400ms ease-in;
+}
+.imagebox .header,
+.mapbox .header {
+    font-size:              .813em;
+    font-weight:            300;
+    line-height:            20px;
+    color:                  rgb(240,240,234);
+    padding:                0;
+    margin:                 8px 10px 4px 8px;
+}
+.imagebox .subheader,
+.mapbox .subheader {
+    font-size:              .75em;
+    font-weight:            300;
+    line-height:            15px;
+    color:                  rgb(135,135,74);
+    padding:                0;
+    margin:                 0 10px 3px 8px;
+}
+.imagebox .info {
+    position:               absolute;
+    top:                    80px;
+    visibility:             hidden;
+    z-index:                2000;
+    width:                  523px;
+    padding:                18px 18px 0 18px;
+    background-color:       rgb(19,19,19);
+    border-radius:          3px;
+    box-shadow:             1px 1px rgb(0,0,0);
+    opacity:                0;
+    -webkit-transition:     opacity 400ms ease-in;
+    -moz-transition:        opacity 400ms ease-in;
+    -ms-transition:         opacity 400ms ease-in;
+    -o-transition:          opacity 400ms ease-in;
+    transition:             opacity 400ms ease-in;
+
+}
+.imagebox .info p {
+    font-size:              .875em;
+    font-weight:            300;
+    line-height:            26px;
+    margin-bottom:          18px;
+}
+.guide .imagebox {
+    min-height:             350px;
+}
+.info.show {
+    visibility:             visible;
+    opacity:                1;
+}
+/* Calculate position of each "pop-up" */
+.imagebox:nth-child( 3n+1 ) .info {
+    left:                   80px;
+}
+.imagebox:nth-child( 3n+2 ) .info {
+    left:                   -170px;
+}
+.imagebox:nth-child( 3n ) .info {
+    left:                   -420px;
+}
+
+
+/* Location */
+.mapbox {
+    width:                  100%;
+    position:               relative;
+}
+.mapbox .map {
+    height:                 500px;
+    width:                  100%;
+}
+.maplink {
+    display:                block;
+    position:               absolute;
+    top:                    0;
+    left:                   0;
+    background-image:       url('http://maps.googleapis.com/maps/api/staticmap?center=59.93604,10.76576&zoom=15&size=720x500&sensor=false&markers=59.93604,10.76576');
+}
+
+
 /* Global styles */
 body {
     font:                           100% sans-serif;                                                    /* ~16px; */

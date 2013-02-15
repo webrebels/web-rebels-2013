@@ -5,8 +5,6 @@
     box-sizing:                     border-box;
 }
 
-
-
 /* Normalizing elements */
 body, menu, h1, h2, a, section, aside, main, div, p, ul, li, form, input, button, fieldset {
     margin:                         0;

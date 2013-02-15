@@ -27,7 +27,10 @@ app.get('/', function(req, res){
 	res.render('frontpage', { pageTitle: 'Web Rebels ☠ Oslo ☠ 2013' });
 });
 app.get('/sponsors', function(req,res){
-	res.render('sponsors', {pageTitle: 'Sponsoring options for the Web Rebels ☠ Oslo 2013'})
+	res.render('sponsors', {pageTitle: 'Our sponsors! Without whom none of this would be possible ☠ Web Rebels ☠ Oslo 2013'})
+});
+app.get('/sponsoroptions', function(req,res){
+    res.render('sponsoroptions', {pageTitle: 'Sponsoring options for the Web Rebels ☠ Oslo 2013'})
 });
 app.get('/about', function(req,res){
 	res.render('about', {pageTitle: '☠ About the Web Rebels ☠'})

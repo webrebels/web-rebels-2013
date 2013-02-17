@@ -1,20 +1,41 @@
-<% include snips/head.ejs %>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/style.css">
+    <title><%=pageTitle%></title>
+    <script>
+        var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-26864429-1']); _gaq.push(['_setDomainName', 'webrebels.org']); _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body class="page">
 
-<h2>Relax, we've got you covered</h2>
+    <% include snips/logo.ejs %>
+    <% include snips/menu.ejs %>
 
-<p>When you attend the Web Rebels Conference you're our guest and we will take care of you. We work very hard to make sure all you need to do is to get here and then we'll do all the rest.</p>
+    <article class="wrap">
+		<h1>Relax, we've got you covered</h1>
 
-<h2>Here is what is included in your ticket</h2>
-<ul>
-	<li>Entrance to the conference</li>
-	<li>Breakfast & lunch during the conference</li>
-	<li>Access to the conference party</li>
-</ul>
+		<p>When you attend the Web Rebels Conference you're our guest and we will take care of you. We work very hard to make sure all you need to do is to get here and then we'll do all the rest.</p>
 
-<h2>You can travel and stay in Norway cheaply</h2>
-<p><a href="http://norwegian.no">Norwegian</a> and <a href="http://sas.no">Scandinavian Airlines</a> both have lower priced tickets on sale which you can get if you make reservations early. Norwegian tends to be the cheapest option.</p>
-<p>Hotels can be expensive, so we've arranged for a rebel discount on the hotels at the venue. Read about the <a href="/location">hotel discounts</a> for more information.</p>
+		<h2>This is included in your ticket</h2>
+		<p>Entrance to the conference and the Open Mic Night. And yeah; there will be swags.</p>
+		<p>Full buffet breakfast both days (no need to grab that on your hotel), full lunch both days, full dinner day one and unlimited coffee / tea plus afternoon sweets. In other words; you will not need to buy any food during the conference!</p>
+		<p>Access to the conference party on day one. Each attendee will be given a decent amount of free baverages where one can choose between a wide selection of micro brewery beers, wine or mineral water.</p>
 
-<a href="http://webrebels.eventbrite.com/">Go grab your ticket!</a>
+		<h2>You can travel and stay in Norway cheaply</h2>
+		<p><a href="http://norwegian.no">Norwegian</a> and <a href="http://sas.no">Scandinavian Airlines</a> both have lower priced tickets on sale which you can get if you make reservations early. Norwegian tends to be the cheapest option.</p>
+		<p>Hotels can be expensive, so we've arranged for a rebel discount on the hotels at the venue. Read about the <a href="/location">hotel discounts</a> for more information.</p>
 
-<% include snips/footer.ejs %>
+		<a href="http://webrebels.eventbrite.com/">Go grab your ticket!</a>
+    </article>
+    <% include snips/footer.ejs %>
+</body>
+</html>

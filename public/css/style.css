@@ -20,7 +20,7 @@ table.simple {
     width: 100%;
     border: 1px solid #f0f0f0;
     border-collapse: separate;
-    border-radius: 4px;    
+    border-radius: 4px;
     padding: 0;
     margin-bottom: 18px;
     border-collapse: collapse;
@@ -61,101 +61,6 @@ table.simple th, table.simple td {
     text-align: left;
 }
 
-/** Map and image box styles **/
-.imagebox,
-.mapbox {
-    position:               relative;
-    background-color:       rgb(19,19,19);
-    width:                  220px;
-    border-radius:          3px;
-    border-bottom:          1px solid rgb(0,0,0);
-}
-.imagebox .img {
-    height:                 142px;
-    cursor:                 pointer;
-    -webkit-transition:     background-image 400ms ease-in;
-    -moz-transition:        background-image 400ms ease-in;
-    -ms-transition:         background-image 400ms ease-in;
-    -o-transition:          background-image 400ms ease-in;
-    transition:             background-image 400ms ease-in;
-}
-.imagebox .header,
-.mapbox .header {
-    font-size:              .813em;
-    font-weight:            300;
-    line-height:            20px;
-    color:                  rgb(240,240,234);
-    padding:                0;
-    margin:                 8px 10px 4px 8px;
-}
-.imagebox .subheader,
-.mapbox .subheader {
-    font-size:              .75em;
-    font-weight:            300;
-    line-height:            15px;
-    color:                  rgb(135,135,74);
-    padding:                0;
-    margin:                 0 10px 3px 8px;
-}
-.imagebox .info {
-    position:               absolute;
-    top:                    80px;
-    visibility:             hidden;
-    z-index:                2000;
-    width:                  523px;
-    padding:                18px 18px 0 18px;
-    background-color:       rgb(19,19,19);
-    border-radius:          3px;
-    box-shadow:             1px 1px rgb(0,0,0);
-    opacity:                0;
-    -webkit-transition:     opacity 400ms ease-in;
-    -moz-transition:        opacity 400ms ease-in;
-    -ms-transition:         opacity 400ms ease-in;
-    -o-transition:          opacity 400ms ease-in;
-    transition:             opacity 400ms ease-in;
-
-}
-.imagebox .info p {
-    font-size:              .875em;
-    font-weight:            300;
-    line-height:            26px;
-    margin-bottom:          18px;
-}
-.guide .imagebox {
-    min-height:             350px;
-}
-.info.show {
-    visibility:             visible;
-    opacity:                1;
-}
-/* Calculate position of each "pop-up" */
-.imagebox:nth-child( 3n+1 ) .info {
-    left:                   80px;
-}
-.imagebox:nth-child( 3n+2 ) .info {
-    left:                   -170px;
-}
-.imagebox:nth-child( 3n ) .info {
-    left:                   -420px;
-}
-
-
-/* Location */
-.mapbox {
-    width:                  100%;
-    position:               relative;
-}
-.mapbox .map {
-    height:                 500px;
-    width:                  100%;
-}
-.maplink {
-    display:                block;
-    position:               absolute;
-    top:                    0;
-    left:                   0;
-    background-image:       url('http://maps.googleapis.com/maps/api/staticmap?center=59.93604,10.76576&zoom=15&size=720x500&sensor=false&markers=59.93604,10.76576');
-}
 
 
 /* Global styles */
@@ -163,8 +68,6 @@ body {
     font:                           100% sans-serif;                                                    /* ~16px; */
     line-height:                    1.5;
     -webkit-text-size-adjust:       none;
-    background-color:               rgb(0,0,0);
-    color:                          rgb(255,255,255);
 }
 
 .front .title {
@@ -183,9 +86,11 @@ body {
 .front {
     background-repeat:              no-repeat;
     background-position:            top center;
+    background-color:               rgb(0,0,0);
+    color:                          rgb(255,255,255);
 }
 
-.logo {
+.front .logo {
     position:                       absolute;
     top:                            10px;
     left:                           30%;
@@ -332,4 +237,102 @@ body {
     width:                          180px;
     top:                            10%;
     left:                           80%;
+}
+
+
+.page {
+    background-image:               url("../gfx/bg.jpg");
+    background-color:               rgb(255,255,255);
+    color:                          rgb(0,0,0);
+}
+
+.page .logo,
+.page .menu,
+.page .wrap,
+.page .foot {
+    overflow:                       hidden;
+    width:                          960px;
+    margin-left:                    auto;
+    margin-right:                   auto;
+    padding:                        20px;
+    background-color:               rgb(255,255,255);
+}
+
+.page .logo a {
+    display:                        block;
+    height:                         120px;
+    background-image:               url("../gfx/wr_logo.svg");
+    background-repeat:              no-repeat;
+    background-position:            top center;
+}
+
+.page .menu {
+    padding-top:                    0;
+    padding-bottom:                 0;
+}
+
+.page .menu a {
+    padding-top:                    8px;
+    padding-bottom:                 8px;
+    padding-right:                  5px;
+    padding-left:                   5px;
+    text-decoration:                none;
+    color:                          rgb(0,0,0);
+}
+
+.page .menu .left a{
+    float:                          right;
+}
+.page .menu .right a{
+    float:                          left;
+}
+
+.page .menu div {
+    border-top:                     4px solid rgb(35,75,81);
+    border-bottom:                  4px solid rgb(35,75,81);
+    float:                          left;
+    width:                          50%;
+
+}
+
+.page .foot a {
+    float:                          right;
+    text-decoration:                none;
+    color:                          rgb(0,0,0);
+    margin-right:                   8px;
+}
+
+.page h1,
+.page h2 {
+    font-family:                    'Asap', sans-serif;
+}
+
+#locationTogler,
+.page p,
+.fullWidthImg {
+    margin-bottom:                  20px;
+}
+
+
+/** Map and image box styles **/
+
+#locationIll,
+.fullWidthImg {
+    overflow:                       hidden;
+    display:                        block;
+    height:                         500px;
+    border:                         2px solid rgb(35,75,81);
+    padding:                        4px;
+}
+
+#locationIll .map,
+#locationIll .images {
+    height:                         488px;
+    width:                          100%;
+}
+
+.mapbox .images .slide {
+    position:                       absolute;
+    top:                            0;
+    left:                           0;
 }

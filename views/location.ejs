@@ -1,58 +1,90 @@
-<% include snips/head.ejs %>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/style.css">
+    <title><%=pageTitle%></title>
+    <script>
+        var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-26864429-1']); _gaq.push(['_setDomainName', 'webrebels.org']); _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body class="page">
 
-<h1>Location</h1>
+    <% include snips/logo.ejs %>
+    <% include snips/menu.ejs %>
 
-<p>Everything releated to the conference happens within a 200 m radius of the venue. The pre-party, the conference, the conference party and <a href="/openmic">Open Mic Night</a> are all taking place within a few meters of the venue.</p>
+    <article class="wrap">
 
-<h2>About Vulkan</h2>
+        <h1>Location</h1>
 
-<div id="locationTogler">
-<ul>
-    <li><a href="#locationimages">Images</a></li>
-    <li><a href="#locationmap">Map</a></li>
-</ul>
-</div>
-<div class="images" id="locationimages">
-    <p class="arrowLeft"> </p>
-    <p class="slide focus" style="background-image: url('img/venue_01.jpg')"> </p>
-    <p class="slide next" style="background-image: url('img/venue_02.jpg')"> </p>
-    <p class="slide next" style="background-image: url('img/venue_03.jpg')"> </p>
-    <p class="slide next" style="background-image: url('img/venue_04.jpg')"> </p>
-    <p class="slide next" style="background-image: url('img/venue_05.jpg')"> </p>
-    <p class="slide next" style="background-image: url('img/venue_06.jpg')"> </p>
-    <p class="arrowRight"> </p>
-</div>
-<div class="mapbox" id="locationmap">
-    <div id="map" class="map"> </div>
-    <a class="maplink map" href="https://maps.google.com/maps?q=Vulkan,+Maridalsveien+13-17,+Oslo,+Norway&hl=en&ie=UTF8&ll=59.922807,10.751388&spn=0.006474,0.016952&sll=59.921194,10.752836&sspn=0.001629,0.004238&hq=Vulkan,&hnear=Maridalsveien+13,+Gr%C3%BCnerl%C3%B8kka,+0175+Oslo,+Norway&t=m&z=16">&nbsp;</a>
+        <p>Everything releated to the conference happens within a 200 m radius of the venue. The pre-party, the conference, the conference party and <a href="/openmic">Open Mic Night</a> are all taking place within a few meters of the venue.</p>
 
-</div>
+        <h2>Venue</h2>
+        <p>Our venue is Fabrikken located at in new area, Vulkan, at Günerløkka. The venue has brand new and modern fasilities and is one of Norways most enegry efficient buildings with top notch aircondition and high speed fiber internet.</p>
 
-<h2>Conference hotels</h2>
-<strong><a href="http://www.scandichotels.no/Hotels/Countries/Norge/Oslo/Hotels/Vulkan/#.UR6ROqvipms">Scandic Hotel Vulkan</a></strong>
-<p><img src="/gfx/location/vulkan.jpg">This is the hotel where we'll be putting our speakers. It is right next door to the venue and we have been able to get a Web Rebel discount.</p>
+        <p>About 20 meters from the venue Norways first food hall is located with a wide selection of gourmet food stores, restaurant, excelent coffee and beer shops. All food served at Web Rebels 2013 will be provided from here.</p>
 
-<strong><a href="http://www.comforthotelxpress.no/">Comfort Hotel xPress Oslo</a></strong>
-<p><img src="/gfx/location/xpress.jpg">One of the coolest new hotels in the city, similar to the <a href="http://yotel.com">Yotel concept</a> in other cities. It's located right in the <a href="https://www.google.com/maps?q=m%C3%B8llergata+26+oslo&hl=no&ie=UTF8&sll=61.143235,9.09668&sspn=0.007953,0.018969&z=16">heart of rock'n roll Oslo</a> and still within decent walking distance of the venue. Free WiFi, naturally.</p>
+        <div id="locationIll">
 
-<strong><a href="http://www.pshotell.no/">PS:Hotell</a></strong>
-<p><img src="/gfx/location/pshotell.jpg">We're also happy that there is a cheaper hotel at the premises, just 20-30 m from the venue, which has extremely low prices. You can <a href="http://www.booking.com/hotel/no/ps-hotell.en.html?aid=311984;label=ps-hotell-bXkLeXsmoaqxr8VMHx83HQS11220884953:pl:ta:p1:p2:ac:ap1s1:nes;ws=&gclid=COnHk_HStrUCFclZ3godNCgAYQ">make reservations online</a>.</p>
+            <div class="images" id="locationimages" style="display: none;">
+                <p class="arrowLeft"> </p>
+                <p class="slide focus" style="background-image: url('../gfx/venue_01.jpg')"> </p>
+                <p class="slide next" style="background-image: url('../gfx/venue_02.jpg')"> </p>
+                <p class="slide next" style="background-image: url('../gfx/venue_03.jpg')"> </p>
+                <p class="slide next" style="background-image: url('../gfx/venue_04.jpg')"> </p>
+                <p class="slide next" style="background-image: url('../gfx/venue_05.jpg')"> </p>
+                <p class="slide next" style="background-image: url('../gfx/venue_06.jpg')"> </p>
+                <p class="arrowRight"> </p>
+            </div>
 
-<h2>Getting there</h2>
+            <div id="map" class="map"> </div>
+        </div>
 
-<strong>Walking</strong>
-<p>You can <a href="http://www.vulkanoslo.no/download.aspx?object_id=9A47978347B74EF395B7CCAF545A16E2.pdf">download a map</a> create by the owenrs of a venu just in case.</p>
-
-<strong>Tram (recommended)</strong>
-<p>Lines 11, 12 and 13 all stop at <strong>Schous plass</strong> where you can walk down Nordregate and across the bridge to Vulkan</p>
-
-<strong>Bus</strong>
-<p>Bus 53 and 54 stops in M&oslash;llerveien. Walk down M&oslash;llerveien and make a left at Dansens Hus</p>
-
-<strong>Taxi</strong>
-<p>The address is Maridalsveien 13-17. Please note that taking a taxi in Norway is expensive.</p>
+        <div id="locationTogler">
+            <ul>
+                <li><a href="#locationimages">Images</a></li>
+                <li><a href="#locationmap">Map</a></li>
+            </ul>
+        </div>
 
 
+        <h2>Staying in Oslo</h2>
+        <p>There are several great hotel in walking distance from the venue. Oslo can be a busy town, we do recommend booking your room early! Here are some of the hotels closes to our venue:</p>
 
-<script src="/js/location.js"></script>
-<% include snips/footer.ejs %>
+        <strong>Scandic Hotel Vulkan</strong>
+        <p>Scandic Hotel Vulkan is Web Rebels 2013 hotel partner. The hotel is a modern design hotel right next door to the venue. By staying here your will be able to walk in your slippers from your room and into the venue. When booking your Web Rebels 2013 ticket you will be given a discount code which can be used at this hotel. <a href="http://www.scandichotels.no/Hotels/Countries/Norge/Oslo/Hotels/Vulkan/#.UR6ROqvipms">Hotel website.</a></p>
+
+        <strong>PS:Hotell</strong>
+        <p>We're also happy that there is a cheaper hotel at the premises, just 20-30 m from the venue, which has extremely low prices. <a href="http://www.pshotell.no/">Hotel website</a></p>
+
+        <strong>Comfort Hotel xPress Oslo</strong>
+        <p>One of the coolest new hotels in the city, similar to the <a href="http://yotel.com">Yotel concept</a> in other cities. It's located right in the <a href="https://www.google.com/maps?q=m%C3%B8llergata+26+oslo&hl=no&ie=UTF8&sll=61.143235,9.09668&sspn=0.007953,0.018969&z=16">heart of rock'n roll Oslo</a> and still within decent walking distance of the venue. Free WiFi, naturally. <a href="http://www.comforthotelxpress.no/">Hotel website</a></p>
+
+
+        <h2>Getting to the venue</h2>
+
+        <strong>Walking</strong>
+        <p>You can <a href="http://www.vulkanoslo.no/download.aspx?object_id=9A47978347B74EF395B7CCAF545A16E2.pdf">download a map</a> create by the owenrs of a venu just in case.</p>
+
+        <strong>Tram (recommended)</strong>
+        <p>Lines 11, 12 and 13 all stop at <strong>Schous plass</strong> where you can walk down Nordregate and across the bridge to Vulkan</p>
+
+        <strong>Bus</strong>
+        <p>Bus 53 and 54 stops in M&oslash;llerveien. Walk down M&oslash;llerveien and make a left at Dansens Hus</p>
+
+        <strong>Taxi</strong>
+        <p>The address is Maridalsveien 13-17. Please note that taking a taxi in Norway is expensive.</p>
+
+    </article>
+
+    <script src="/js/location.js"></script>
+    <% include snips/footer.ejs %>
+</body>
+</html>

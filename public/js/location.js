@@ -66,7 +66,7 @@
 
 
     // Do map
-    
+
     var map,
         locations = {
             venue : { title : 'Conference Venue', lat : 59.922807, lng : 10.751388 }
@@ -91,17 +91,17 @@
             map: map,
             title: locations.venue.title
         });
-        
+
         google.maps.event.addDomListener( window, 'resize', function() {
             map.setCenter( map.getCenter() );
         });
-        
+
         hideMapLink();
     }
-    
+
     // showMap needs to be global for async map loading
     window["showMap"] = showMap;
-    
+
     function loadMap() {
         var script = document.createElement("script");
         script.type = "text/javascript";

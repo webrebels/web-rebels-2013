@@ -4,24 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
     <link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/style.css">
-    <title>Web Rebels Conference 2013</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <title><%=pageTitle%></title>
 </head>
 <body id="body" class="front">
     <div class="logo"></div>
 
-    <menu class="menu">
-        <div class="left">
-            <a href="/speakers/">Speakers</a>
-            <a href="/tickets/">Tickets</a>
-            <a href="/location/">Location</a>
-        </div>
-        <div class="right">
-            <a href="/schedule/">Schedule</a>
-            <a href="/about/">About</a>
-            <a href="/sponsors/">Sponsors</a>
-        </div>
-    </menu>
+    <% include snips/menu.ejs %>
 
     <main class="main">
         <a href="/speaker/#garann" class="speaker garann"></a>
@@ -29,6 +18,7 @@
         <a href="/speaker/#robert" class="speaker david"></a>
         <a href="/speaker/#robert" class="speaker magnars"></a>
     </main>
+    <script src="/js/script.js"></script>
 
     <footer class="foot">
         <aside>
@@ -42,6 +32,5 @@
             <!-- Sponsors goes here -->
         </section>
     </footer>
-    <script src="js/script.js"></script>
 </body>
 </html>

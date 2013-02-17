@@ -5,8 +5,6 @@
     box-sizing:                     border-box;
 }
 
-
-
 /* Normalizing elements */
 body, menu, h1, h2, a, section, aside, main, div, p, ul, li, form, input, button, fieldset {
     margin:                         0;
@@ -17,12 +15,156 @@ ul {
     list-style:                     none;
 }
 
+/** Table styles **/
+table.simple {
+    width: 100%;
+    border: 1px solid #f0f0f0;
+    border-collapse: separate;
+    border-radius: 4px;    
+    padding: 0;
+    margin-bottom: 18px;
+    border-collapse: collapse;
+}
+table.simple thead tr:first-child th:first-child {
+    border-radius: 4px 0 0 0;
+}
+table.simple td, table.simple th {
+    padding-left: 10px;
+}
+
+table.simple thead th {
+    background-color: #202020;
+}
+
+table.simple th {
+    padding-top: 9px;
+    vertical-align: middle;
+    font-weight: bold;
+}
+table.simple th, table td {
+    padding: 10px 10px 9px 0;
+    line-height: 1.5em;
+    text-align: left;
+}
+table.outerborder td, table.outerborder th {
+    padding-left: 10px;
+}
+
+table.simple td {
+    vertical-align: top;
+    border-top: 1px solid #f0f0f0;
+}
+
+table.simple th, table.simple td {
+    padding: 10px 10px 9px 0;
+    line-height: 1.5em;
+    text-align: left;
+}
+
+/** Map and image box styles **/
+.imagebox,
+.mapbox {
+    position:               relative;
+    background-color:       rgb(19,19,19);
+    width:                  220px;
+    border-radius:          3px;
+    border-bottom:          1px solid rgb(0,0,0);
+}
+.imagebox .img {
+    height:                 142px;
+    cursor:                 pointer;
+    -webkit-transition:     background-image 400ms ease-in;
+    -moz-transition:        background-image 400ms ease-in;
+    -ms-transition:         background-image 400ms ease-in;
+    -o-transition:          background-image 400ms ease-in;
+    transition:             background-image 400ms ease-in;
+}
+.imagebox .header,
+.mapbox .header {
+    font-size:              .813em;
+    font-weight:            300;
+    line-height:            20px;
+    color:                  rgb(240,240,234);
+    padding:                0;
+    margin:                 8px 10px 4px 8px;
+}
+.imagebox .subheader,
+.mapbox .subheader {
+    font-size:              .75em;
+    font-weight:            300;
+    line-height:            15px;
+    color:                  rgb(135,135,74);
+    padding:                0;
+    margin:                 0 10px 3px 8px;
+}
+.imagebox .info {
+    position:               absolute;
+    top:                    80px;
+    visibility:             hidden;
+    z-index:                2000;
+    width:                  523px;
+    padding:                18px 18px 0 18px;
+    background-color:       rgb(19,19,19);
+    border-radius:          3px;
+    box-shadow:             1px 1px rgb(0,0,0);
+    opacity:                0;
+    -webkit-transition:     opacity 400ms ease-in;
+    -moz-transition:        opacity 400ms ease-in;
+    -ms-transition:         opacity 400ms ease-in;
+    -o-transition:          opacity 400ms ease-in;
+    transition:             opacity 400ms ease-in;
+
+}
+.imagebox .info p {
+    font-size:              .875em;
+    font-weight:            300;
+    line-height:            26px;
+    margin-bottom:          18px;
+}
+.guide .imagebox {
+    min-height:             350px;
+}
+.info.show {
+    visibility:             visible;
+    opacity:                1;
+}
+/* Calculate position of each "pop-up" */
+.imagebox:nth-child( 3n+1 ) .info {
+    left:                   80px;
+}
+.imagebox:nth-child( 3n+2 ) .info {
+    left:                   -170px;
+}
+.imagebox:nth-child( 3n ) .info {
+    left:                   -420px;
+}
+
+
+/* Location */
+.mapbox {
+    width:                  100%;
+    position:               relative;
+}
+.mapbox .map {
+    height:                 500px;
+    width:                  100%;
+}
+.maplink {
+    display:                block;
+    position:               absolute;
+    top:                    0;
+    left:                   0;
+    background-image:       url('http://maps.googleapis.com/maps/api/staticmap?center=59.93604,10.76576&zoom=15&size=720x500&sensor=false&markers=59.93604,10.76576');
+}
+
 
 /* Global styles */
 body {
     font:                           100% sans-serif;                                                    /* ~16px; */
     line-height:                    1.5;
     -webkit-text-size-adjust:       none;
+    background-color:               rgb(0,0,0);
+    color:                          rgb(255,255,255);
 }
 
 .front .title {
@@ -41,7 +183,6 @@ body {
 .front {
     background-repeat:              no-repeat;
     background-position:            top center;
-    background-color:               rgb(0,0,0);
 }
 
 .logo {

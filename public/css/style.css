@@ -71,6 +71,7 @@ body {
     -webkit-text-size-adjust:       none;
 }
 
+
 .front .title {
     font-family:                    'Asap', sans-serif;
     text-align:                     right;
@@ -196,48 +197,67 @@ body {
     background:                     rgb(255,255,255);
     background-repeat:              no-repeat;
     background-position:            top center;
-}
-
-
-
-.front .garann {
-    background-image:               url("../gfx/speaker_garann.jpg");
     height:                         180px;
     width:                          180px;
+}
+
+.garann     { background-image:               url("../gfx/speaker_garann.jpg") }
+.robert     { background-image:               url("../gfx/speaker_robert.jpg") }
+.david      { background-image:               url("../gfx/speaker_robert.jpg") }
+.magnars    { background-image:               url("../gfx/speaker_robert.jpg") }
+
+.front .garann {
     top:                            20%;
     left:                           20%;
 }
 
 .front .robert {
-    background-image:               url("../gfx/speaker_robert.jpg");
-    height:                         180px;
-    width:                          180px;
     top:                            30%;
     left:                           40%;
 }
 
-.front .garann {
-    background-image:               url("../gfx/speaker_garann.jpg");
-    height:                         180px;
-    width:                          180px;
-    top:                            20%;
-    left:                           20%;
-}
-
 .front .david {
-    background-image:               url("../gfx/speaker_robert.jpg");
-    height:                         180px;
-    width:                          180px;
     top:                            70%;
     left:                           60%;
 }
 
 .front .magnars {
-    background-image:               url("../gfx/speaker_robert.jpg");
-    height:                         180px;
-    width:                          180px;
     top:                            10%;
     left:                           80%;
+}
+
+.speakers {
+    width:                          100%;
+}
+
+.speaker .img {
+    height:                 180px;
+    width:                  180px;
+}
+.speakers .header {
+    font-size:              .813em;
+    font-weight:            300;
+    line-height:            20px;
+    padding:                0;
+    margin:                 8px 10px 4px 8px;
+}
+.speakers .subheader {
+    font-size:              .75em;
+    font-weight:            300;
+    line-height:            15px;
+    padding:                0;
+    margin:                 0 10px 3px 8px;
+}
+.speakers .info {
+    width:                  523px;
+    padding:                18px 18px 0 18px;
+}
+
+.speakers .info p {
+    font-size:              .875em;
+    font-weight:            300;
+    line-height:            26px;
+    margin-bottom:          18px;
 }
 
 

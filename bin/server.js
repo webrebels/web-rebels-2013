@@ -50,6 +50,9 @@ app.get('/openmic', function(req,res){
 app.get('/schedule', function(req,res){
     res.render('schedule', {pageTitle: 'Schedule for Web Rebels ☠ Oslo 2013'})
 });
+app.get('/speakers', function(req,res){
+    res.render('speakers', {pageTitle: 'Speakers - Web Rebels ☠ Oslo 2013'})
+});
 httpServer.listen(port);
 console.info('WR2013 is running at http://localhost:' + port + '/');
 

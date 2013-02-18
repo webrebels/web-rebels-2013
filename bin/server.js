@@ -36,7 +36,10 @@ app.get('/about', function(req,res){
 	res.render('about', {pageTitle: '☠ About the Web Rebels ☠'})
 });
 app.get('/tickets', function(req,res){
-	res.render('tickets', {pageTitle: 'Tickets for the Web Rebels ☠ Oslo 2013'})
+    res.render('tickets', {pageTitle: 'Tickets for the Web Rebels ☠ Oslo 2013'})
+});
+app.get('/ticketConfirmation', function(req,res){
+    res.render('ticketConfirmation', {pageTitle: 'Thank you for registering with the Web Rebels ☠ Oslo 2013'})
 });
 app.get('/location', function(req,res){
 	res.render('location', {pageTitle: 'Location of the Web Rebels ☠ Oslo 2013'})

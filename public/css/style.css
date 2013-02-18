@@ -319,6 +319,15 @@ body {
 .centrify {
     text-align: center;
 }
+.fleft {
+    float:                          left;
+}
+.half {
+    width:                          50%;
+}
+.last {
+    clear:                          all;
+}
 
 /** Map and image box styles **/
 

@@ -33,7 +33,7 @@
     "url": "https://github.com/webrebels/web-rebels-2013/issues"
   },
   "licenses": [],
-  "subdomain": "wr2013",
+  "subdomain": "webreb2013",
   "dependencies": {
     "express": "3.x",
     "ejs": "*"

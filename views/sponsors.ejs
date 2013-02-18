@@ -1,31 +1,10 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
-    <link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/style.css">
-    <title><%=pageTitle%></title>
-    <script>
-        var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-26864429-1']); _gaq.push(['_setDomainName', 'webrebels.org']); _gaq.push(['_trackPageview']);
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-</head>
-<body class="page">
-
-    <% include snips/logo.ejs %>
-    <% include snips/menu.ejs %>
+<% include snips/head.ejs %>
 
     <article class="wrap">
 		<h1>Our beloved sponsors!</h1>
-
 		<p>We want you to help contribute to making the conference better. Our focus is to create mutual benefits for sponsors and attendees by creating amazing experiences. We want to work with our sponsors to help you promote your brand, launch your product or whatever you have in mind.</p>
 
-		<p>Sounds interesting? <a href="mailto:sponsors[ replace this bracket with a @ ]webrebels.org&gt;">Contact us today</a></p>
+<p>Sounds interesting? <a href="mailto:sponsors[ replace this bracket with a @ ]webrebels.org&gt;">Contact us today</a> or read more about <a href="/sponsoroptions">our sponsoring options</a>.</p>
     </article>
     <% include snips/footer.ejs %>
 </body>

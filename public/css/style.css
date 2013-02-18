@@ -312,7 +312,12 @@ body {
 .fullWidthImg {
     margin-bottom:                  20px;
 }
-
+.huge {
+    font-size: 250%;
+}
+.centrify {
+    text-align: center;
+}
 
 /** Map and image box styles **/
 

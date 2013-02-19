@@ -1,6 +1,6 @@
 {
   "name": "web-rebels-2013",
-  "version": "0.0.1-1",
+  "version": "0.0.1-2",
   "author": {
     "name": "Trygve Lie",
     "email": "post@trygve-lie.com"
@@ -24,6 +24,10 @@
     {
       "name": "Trygve Lie",
       "email": "post@trygve-lie.com"
+    },
+    {
+      "name": "Espen Dalløkken",
+      "email": "espen@dallokken.com"
     }
   ],
   "engines": {

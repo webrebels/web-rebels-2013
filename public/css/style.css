@@ -374,3 +374,8 @@ td, th {
 .schedule .additional {
     line-height:            22px;
 }
+
+article ul {
+    list-style: disc;
+    padding: 0 2em 1em 2em;
+}

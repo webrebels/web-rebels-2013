@@ -10,7 +10,19 @@
 <body id="body" class="front">
     <div class="logo"></div>
 
-    <% include snips/menu.ejs %>
+    <menu class="menu">
+        <div class="left">
+            <a href="/location/">Location</a>
+            <a href="/tickets/">Tickets</a>
+            <a href="/speakers/">Speakers</a>
+        </div>
+        <div class="right">
+            <a href="/schedule/">Schedule</a>
+            <a href="/sponsors/">Sponsors</a>
+            <a href="/about/">About</a>
+        </div>
+    </menu>
+
 
     <main class="main">
         <a href="/speaker/#garann" class="speaker garann"></a>

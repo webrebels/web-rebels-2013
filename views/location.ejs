@@ -1,8 +1,6 @@
 <% include snips/head.ejs %>
     <article class="wrap">
 
-        <h1>Location</h1>
-
         <p>
           Everything releated to the conference happens within a 200m
           radius of the venue. The pre-party, the conference, the
@@ -10,10 +8,11 @@
           are all taking place within a few metres of the venue.
         </p>
 
-        <h2>Venue</h2>
+        <h2>The Venue</h2>
         <p>
-          Our venue is Fabrikken, located in the newly constructed
-          area, Vulkan, at Grünerløkka. The venue has brand new and
+          Our conference venue is <a target="_blank" href="http://www.fabrikken.no/">Fabrikken</a>, located in the newly constructed
+          area, <a target="_blank" href="http://www.vulkanoslo.no/">Vulkan</a>
+          , at <a target="_blank" href="http://en.wikipedia.org/wiki/Gr%C3%BCnerl%C3%B8kka">Grünerløkka</a>. The venue has brand new and
           modern facilities and is one of Norway's most energy
           efficient buildings with top notch air conditioning and high
           speed fiber internets.
@@ -22,20 +21,26 @@
           Oslo's first gourmet food market is located about 20 metres
           from the venue, with a wide selection of gourmet food
           stores, restaurants, excellent coffee and beer shops. All
-          food served at Web Rebels 2013 will be provided from here.
+          food served at the conference will be provided from these establishments.
         </p>
 
-        <div class="images" id="locationimages">
-            <a href="../gfx/venue_01.jpg" title="Previous picture" class="arrow prev">&lt;</a>
-
-            <img id="locationimg" src="../gfx/venue_01.jpg" class="slide focus" title="Venue picture" data-n="1" data-min="1" data-max="6" />
-
-            <!--p class="slide next" style="background-image: url('../gfx/venue_06.jpg')"> </p-->
-            <a href="../gfx/venue_02.jpg" title="Next picture" class="arrow next">&gt;</a>
+        <div id="locationTogler">
+            <ul>
+                <li><a href="#locationimages">Images</a></li>
+                <li><a href="#locationmap">Map</a></li>
+            </ul>
         </div>
-
-        <h2>Getting to the Venue</h2>
-
+        <div id="locationIll">
+            <div class="images" id="locationimages" style="display: none;">
+                <a href="../gfx/venue_01.jpg" title="Previous picture" class="arrow prev">&lt;</a>
+                <img id="locationimg" src="../gfx/venue_01.jpg" class="slide focus" title="Venue picture" data-n="1" data-min="1" data-max="6" />
+                <p class="slide next" style="background-image: url('../gfx/venue_06.jpg')"> </p>
+                <a href="../gfx/venue_02.jpg" title="Next picture" class="arrow next">&gt;</a>
+            </div>
+            <div id="locationmap"><div id="map" class="map"> </div></div>
+        </div>
+        
+        <h2>Getting there</h2>
         <p>The address is <a href="https://maps.google.com/maps?q=Scandic+Hotel+Vulkan,+Maridalsveien+13,+0175+Oslo,+Norway&hl=en&sll=59.922366,10.753341&sspn=0.003699,0.013078&dirflg=w&hq=Scandic+Hotel+Vulkan,+Maridalsveien+13,+0175+Oslo,+Norway&t=m&z=15"><strong>Maridalsveien 13-17</strong></a></p>
 
         <strong>Walking</strong>
@@ -65,7 +70,7 @@
           that taxi fares in Norway are quite expensive.
         </p>
 
-        <h2>You Can Travel and Stay in Norway Cheaply (No, Really!)</h2>
+        <h2>You Can Travel to Norway Cheaply (No, Really!)</h2>
         <p>
           <a target="_blank" href="http://norwegian.no/en/">Norwegian</a> and
           <a target="_blank" href="http://www.flysas.com/en/uk/">SAS</a>
@@ -102,15 +107,15 @@
           your room and into the venue. When booking your Web Rebels
           2013 ticket you will be given a discount code which can be
           used at this hotel.
-          <a href="http://www.scandichotels.no/Hotels/Countries/Norge/Oslo/Hotels/Vulkan/#.UR6ROqvipms">Hotel website.</a>
+          <!--a href="http://www.scandichotels.no/Hotels/Countries/Norge/Oslo/Hotels/Vulkan/#.UR6ROqvipms">Hotel website.</a-->
         </p>
 
         <strong><a href="http://www.pshotell.no/">PS:Hotell</a></strong>
         <p>
           We're also happy that there is a cheaper hotel at the
           premises, just 20-30m from the venue, which has extremely
-          low prices. <a href="http://www.pshotell.no/">Hotel
-          website</a>
+          low prices. <!--a href="http://www.pshotell.no/">Hotel
+          website</a-->
         </p>
 
         <strong><a href="http://www.comforthotelxpress.no/">Comfort Hotel xPress Oslo</a></strong>
@@ -121,7 +126,7 @@
           <a href="https://www.google.com/maps?q=m%C3%B8llergata+26+oslo&hl=no&ie=UTF8&sll=61.143235,9.09668&sspn=0.007953,0.018969&z=16">heart
           of rock'n roll Oslo</a> and still within decent walking
           distance of the venue. Free wifi, naturally.
-          <a href="http://www.comforthotelxpress.no/">Hotel website</a>
+          <!--a href="http://www.comforthotelxpress.no/">Hotel website</a-->
         </p>
 
         <h2>If Your Company's Paying Anyway</h2>

@@ -343,7 +343,7 @@ td ul {
 }
 
 .map {
-    height:                         488px;
+    height:                         288px;
     width:                          100%;
     overflow:                       hidden;
 }
@@ -354,6 +354,8 @@ td ul {
 
 .images {
     position:                       relative;
+    overflow:                       hidden;
+    height:                         288px;
 }
 
 .images img {

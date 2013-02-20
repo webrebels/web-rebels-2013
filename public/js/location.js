@@ -1,9 +1,29 @@
 (function() {
 
-    var youCanTouchThis = 'createTouch' in document;
+// Flip map / slideshow
 
-    // Flip map / slideshow
+    function mapSlideshowFlip ( ev ) {
 
+        var url = ev.target.href,
+            id = url.substr( url.indexOf('#') + 1 );
+
+        if ( id === 'locationimages' ) {
+            document.getElementById( 'locationimages' ).setAttribute('style', 'display: block;');
+            document.getElementById( 'locationmap' ).setAttribute('style', 'display: none;');
+        }
+
+        if ( id === 'locationmap' ) {
+            document.getElementById( 'locationimages' ).setAttribute('style', 'display: none;');
+            document.getElementById( 'locationmap' ).setAttribute('style', 'display: block;');
+        }
+
+        ev.preventDefault();
+
+    }
+
+    var venueListEl = document.querySelectorAll('#locationTogler ul')[ 0 ];
+    venueListEl.addEventListener('click', mapSlideshowFlip );
+    
 
     var images = document.getElementById("locationimages");
     var img = document.getElementById("locationimg");
@@ -76,8 +96,5 @@
         script.src = "http://maps.googleapis.com/maps/api/js?sensor=false&callback=showMap";
         document.body.appendChild(script);
     }
-
-    if (!youCanTouchThis) {
-        loadMap();
-    }
+    loadMap();
 })();

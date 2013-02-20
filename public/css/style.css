@@ -51,7 +51,6 @@ td, th {
 }
 
 
-
 .front .title {
     font-family:                    'Asap', sans-serif;
     text-align:                     right;
@@ -373,4 +372,27 @@ td, th {
 }
 .schedule .additional {
     line-height:            22px;
+}
+
+
+@media screen and (max-width: 720px) {
+    .page .logo, .page .menu, .page .wrap, .page .foot {
+        width: auto;
+    }
+
+    .schedule {
+        width: auto;
+    }
+
+    .half {
+        width: auto;
+    }
+
+    img {
+        max-width: 100%;
+    }
+    
+    .fullWidthImg {
+        height: auto;
+    }
 }

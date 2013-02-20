@@ -157,7 +157,7 @@ td, th {
     padding:                        20px;
     height:                         200px;
     float:                          right;
-
+    min-width:                      220px;
 }
 
 .front .foot aside div {

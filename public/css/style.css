@@ -309,7 +309,6 @@ td, th {
     font-family:                    'Asap', sans-serif;
 }
 
-#locationTogler,
 .page p,
 .imageFrame {
     margin-bottom:                  20px;
@@ -332,7 +331,6 @@ td, th {
 
 /** Map and image box styles **/
 
-#locationIll,
 .imageFrame {
     overflow:                       hidden;
     display:                        block;
@@ -340,17 +338,56 @@ td, th {
     padding:                        4px;
 }
 
-#locationIll .map,
-#locationIll .images {
+.map {
     height:                         488px;
     width:                          100%;
+    overflow:                       hidden;
 }
 
-.mapbox .images .slide {
+.map {
+    margin-top:                     20px;
+}
+
+.images {
+    position:                       relative;
+}
+
+.images img {
+    max-width:                      100%;
+}
+
+.images .arrow {
+    position:                       absolute;
+    font-size:                      30px;
+    line-height:                    15px;
+    color:                          white;
+    background-color:               black;
+    top:                            45%;
+    padding:                        10px;
+    text-decoration:                none;
+    width:                          40px;
+    height:                         40px;
+    border-radius:                  25px;
+    opacity:                        0.3;
+}
+
+.images .arrow:hover {
+    opacity:                        0.7;
+}
+
+.images .arrow.prev {
+    left:                           0;
+}
+
+.images .arrow.next {
+    right:                          0;
+}
+
+/*.mapbox .images .slide {
     position:                       absolute;
     top:                            0;
     left:                           0;
-}
+}*/
 
 
 

@@ -311,7 +311,7 @@ td, th {
 
 #locationTogler,
 .page p,
-.fullWidthImg {
+.imageFrame {
     margin-bottom:                  20px;
 }
 .huge {
@@ -333,10 +333,9 @@ td, th {
 /** Map and image box styles **/
 
 #locationIll,
-.fullWidthImg {
+.imageFrame {
     overflow:                       hidden;
     display:                        block;
-    height:                         500px;
     border:                         2px solid rgb(35,75,81);
     padding:                        4px;
 }

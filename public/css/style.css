@@ -392,6 +392,17 @@ td, th {
 
 
 
+/* Speakers */
+.speaker {
+    overflow:                       hidden;
+    margin-bottom:                  20px;
+}
+.speaker img {
+    float:                          left;
+    margin-right:                   20px;
+}
+
+
 
 /* Schedule */
 .schedule {

@@ -51,7 +51,6 @@ td, th {
 }
 
 
-
 .front .title {
     font-family:                    'Asap', sans-serif;
     text-align:                     right;
@@ -158,7 +157,7 @@ td, th {
     padding:                        20px;
     height:                         200px;
     float:                          right;
-
+    min-width:                      220px;
 }
 
 .front .foot aside div {
@@ -310,9 +309,8 @@ td, th {
     font-family:                    'Asap', sans-serif;
 }
 
-#locationTogler,
 .page p,
-.fullWidthImg {
+.imageFrame {
     margin-bottom:                  20px;
 }
 .huge {
@@ -333,26 +331,63 @@ td, th {
 
 /** Map and image box styles **/
 
-#locationIll,
-.fullWidthImg {
+.imageFrame {
     overflow:                       hidden;
     display:                        block;
-    height:                         500px;
     border:                         2px solid rgb(35,75,81);
     padding:                        4px;
 }
 
-#locationIll .map,
-#locationIll .images {
+.map {
     height:                         488px;
     width:                          100%;
+    overflow:                       hidden;
 }
 
-.mapbox .images .slide {
+.map {
+    margin-top:                     20px;
+}
+
+.images {
+    position:                       relative;
+}
+
+.images img {
+    max-width:                      100%;
+}
+
+.images .arrow {
+    position:                       absolute;
+    font-size:                      30px;
+    line-height:                    15px;
+    color:                          white;
+    background-color:               black;
+    top:                            45%;
+    padding:                        10px;
+    text-decoration:                none;
+    width:                          40px;
+    height:                         40px;
+    border-radius:                  25px;
+    opacity:                        0.3;
+}
+
+.images .arrow:hover {
+    opacity:                        0.7;
+}
+
+.images .arrow.prev {
+    left:                           0;
+}
+
+.images .arrow.next {
+    right:                          0;
+}
+
+/*.mapbox .images .slide {
     position:                       absolute;
     top:                            0;
     left:                           0;
-}
+}*/
 
 
 
@@ -378,4 +413,26 @@ td, th {
 article ul {
     list-style: disc;
     padding: 0 2em 1em 2em;
+}
+
+@media screen and (max-width: 720px) {
+    .page .logo, .page .menu, .page .wrap, .page .foot {
+        width: auto;
+    }
+
+    .schedule {
+        width: auto;
+    }
+
+    .half {
+        width: auto;
+    }
+
+    img {
+        max-width: 100%;
+    }
+    
+    .fullWidthImg {
+        height: auto;
+    }
 }

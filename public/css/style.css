@@ -297,29 +297,33 @@ p,
     right:                          0;
 }
 
-#locationTogler {
+/*#locationTogler {
     width: 100%;
     display: block;
-}
-#locationTogler ul {
-    margin-left:                    0;
-    padding-left:                   0;
 }
 #locationTogler li {
     float:                          left;
     list-style:                     none;
     margin-right:                   10px;
 }
+*/
+#locationTogler {
+    margin-left:                    0;
+    padding-left:                   0;
+    margin-bottom:                  0;
+    padding-bottom:                 0;
+}
 #locationIll {
     background-image:               url("../gfx/bg.jpg");
 }
-#locationTogler li a {
+#locationTogler  a, #locationTogler  a:visited {
     display:                        block;
     padding:                        5px;
     background-image:               url("../gfx/bg.jpg");
     text-decoration:                none;
+    color:                          rgb(138,138,76);;
 }
-#locationTogler li a:hover {
+#locationTogler a:hover {
     background-color:               #8C8C8C;
     color:                          #484848;
     background-image:               none;

@@ -21,7 +21,7 @@
 
     }
 
-    var venueListEl = document.querySelectorAll('#locationTogler ul')[ 0 ];
+    var venueListEl = document.querySelectorAll('#locationTogler')[ 0 ];
     venueListEl.addEventListener('click', mapSlideshowFlip );
     
 

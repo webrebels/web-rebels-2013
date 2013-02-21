@@ -72,7 +72,7 @@ td ul {
     margin-left:                    auto;
     margin-right:                   auto;
     padding:                        20px;
-    background-color:               rgba(255,255,255,0.3);
+    /* background-color:               rgba(255,255,255,0.3); */
 }
 
 .foot {
@@ -214,11 +214,6 @@ td ul {
     right:                          0;
 }
 
-/*.mapbox .images .slide {
-    position:                       absolute;
-    top:                            0;
-    left:                           0;
-}*/
 
 
 
@@ -256,6 +251,63 @@ article ul {
     list-style: disc;
     padding: 0 2em 1em 2em;
 }
+
+
+.slot {
+    position:               relative;
+    overflow:               hidden;
+    height:                 150px;
+    float:                  left;
+    background-color:       rgb(255,255,255);
+    margin-bottom:          20px;
+    border:                 4px solid rgb(255,255,255);
+    border-radius:          4px;
+    /* box-shadow:             rgb(187, 187, 187) 0px 1px 4px 0px; */
+}
+.slot .img {
+    width:                  100%;
+    height:                 142px;
+    background-repeat:              no-repeat;
+    background-position:            top center;
+}
+.slot a h2 {
+    position:               absolute;
+    display:                none;
+    bottom:                 0;
+    height:                 40px;
+    padding:                4px;
+    width:                  100%;
+    background-color:       rgba(0,0,0,0.5);
+    color:                  rgb(255,255,255);
+}
+.slot a:hover h2 {
+    display:                block;
+}
+.row_a {
+    width:                  212px;
+    margin-right:           10px;
+}
+.row_b {
+    width:                  214px;
+    margin-right:           10px;
+    margin-left:            10px;
+}
+.row_c {
+    width:                  212px;
+    margin-left:            10px;
+}
+.row_d {
+    width:                  214px;
+    margin-left:            232px;
+}
+
+
+/* Speakers */
+.slot .jan {
+    background-image:               url(../gfx/front_jan.jpg);
+}
+
+
 
 @media screen and (max-width: 720px) {
     .page .logo, .page .menu, .page .wrap, .page .foot {

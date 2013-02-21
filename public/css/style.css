@@ -262,7 +262,6 @@ p,
     position:                       relative;
     overflow:                       hidden;
     height:                         288px;
-    float:                          left;
     width:                          100%;
 }
 
@@ -297,16 +296,6 @@ p,
     right:                          0;
 }
 
-/*#locationTogler {
-    width: 100%;
-    display: block;
-}
-#locationTogler li {
-    float:                          left;
-    list-style:                     none;
-    margin-right:                   10px;
-}
-*/
 #locationTogler {
     margin-left:                    0;
     padding-left:                   0;
@@ -317,7 +306,6 @@ p,
     background-image:               url("../gfx/bg.jpg");
 }
 #locationTogler  a, #locationTogler  a:visited {
-    display:                        block;
     padding:                        5px;
     background-image:               url("../gfx/bg.jpg");
     text-decoration:                none;

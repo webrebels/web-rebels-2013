@@ -262,6 +262,8 @@ p,
     position:                       relative;
     overflow:                       hidden;
     height:                         288px;
+    float:                          left;
+    width:                          100%;
 }
 
 .images img {
@@ -295,9 +297,33 @@ p,
     right:                          0;
 }
 
-
-
-
+#locationTogler {
+    width: 100%;
+    display: block;
+}
+#locationTogler ul {
+    margin-left:                    0;
+    padding-left:                   0;
+}
+#locationTogler li {
+    float:                          left;
+    list-style:                     none;
+    margin-right:                   10px;
+}
+#locationIll {
+    background-image:               url("../gfx/bg.jpg");
+}
+#locationTogler li a {
+    display:                        block;
+    padding:                        5px;
+    background-image:               url("../gfx/bg.jpg");
+    text-decoration:                none;
+}
+#locationTogler li a:hover {
+    background-color:               #8C8C8C;
+    color:                          #484848;
+    background-image:               none;
+}
 
 /* Speakers page */
 .speaker {
@@ -308,8 +334,6 @@ p,
     float:                          left;
     margin-right:                   20px;
 }
-
-
 
 /* Schedule page  */
 .schedule {

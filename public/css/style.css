@@ -76,6 +76,16 @@ td ul {
 }
 
 
+.separator {
+    margin-left:                    auto;
+    margin-right:                   auto;
+    width:                          250px;
+    height:                         40px;
+    background-image:               url("../gfx/separator.svg");
+    background-repeat:              no-repeat;
+    background-position:            center center;    
+}
+
 
 /* Logo at the top of the page */
 .logo a {
@@ -125,10 +135,35 @@ td ul {
 
 /* Poster at frontpage */
 .poster {
-    height:                         300px;
-    background-image:               url(../gfx/bg.jpg);
+    position:                       relative;
+    height:                         350px;
+    background-image:               url(../gfx/b3.jpg);
+    border-radius:                  4px;
 }
 
+.poster h1,
+.poster h2,
+.poster h3 {
+    position:                       absolute;
+    right:                          0;
+    padding-left:                   10px;
+    padding-right:                  10px;
+    background-color:               rgba(255,255,255,0.7);
+
+    text-shadow:                    rgba(255, 255, 255, 0.74902) 0px 1px 0px;
+}
+.poster h1 {
+    top:                            200px;
+    font-size:                      2em;
+}
+.poster h2 {
+    top:                            250px;
+    font-size:                      1.625em;
+}
+.poster h3 {
+    top:                            273px;
+    font-size:                      1.225em;
+}
 
 /* Footer at the bottom of the page */
 .foot {

@@ -1,7 +1,7 @@
 <% include snips/head.ejs %>
 
     <section class="wrap">
-      <article class="poster">
+      <article id="poster" class="poster">
         <h1>All web, all the time</h1>
         <h2>23rd - 24th of May</h2>
         <h3>Oslo Norway</h3>
@@ -14,42 +14,42 @@
 
       <article class="slot row_a">
         <a href="/speakers/#bodil">
-          <div class="img bodil"></div>
+          <div class="img" style="background-image: url(/gfx/front_bodil.jpg);"></div>
           <h2>Bodil Stokke</h2>
         </a>
       </article>
 
       <article class="slot row_b">
         <a href="/speakers/#david">
-          <div class="img david"></div>
+          <div class="img" style="background-image: url(/gfx/front_david.jpg);"></div>
           <h2>David Nolen</h2>
         </a>
       </article>
 
       <article class="slot row_c">
         <a href="/speakers/#garann">
-          <div class="img garann"></div>
+          <div class="img" style="background-image: url(/gfx/front_garann.jpg);"></div>
           <h2>Garann Means</h2>
         </a>
       </article>
 
       <article class="slot row_a">
         <a href="/speakers/#jan">
-          <div class="img jan"></div>
+          <div class="img" style="background-image: url(/gfx/front_jan.jpg);"></div>
           <h2>Jan Lenhardt</h2>
         </a>
       </article>
 
       <article class="slot row_b">
         <a href="/speakers/#mario">
-          <div class="img mario"></div>
+          <div class="img" style="background-image: url(/gfx/front_mario.jpg);"></div>
           <h2>Dr.-Ing. Mario Heiderich</h2>
         </a>
       </article>
 
       <article class="slot row_c">
         <a href="/speakers/#reginald">
-          <div class="img reginald"></div>
+          <div class="img" style="background-image: url(/gfx/front_reginald.jpg);"></div>
           <h2>Reginald Braithwaite</h2>
         </a>
       </article>
@@ -125,7 +125,17 @@
       </article>
 
     </section>
-    <script src="/js/location.js"></script>
+    <script>
+      (function(){
+        function randomImg() {
+          var imgs  = ['b0','b1','b2','b3','b4','b5','b6','b7','b8','b9','b10'],
+            random  = Math.floor(Math.random() * ((imgs.length - 1) - 0 + 1) + 0);
+          return imgs[random];
+        }
+        var poster = document.getElementById('poster');
+        poster.setAttribute('style', 'background-image: url("../gfx/' + randomImg() + '.jpg");');
+      }());
+    </script>
     <% include snips/footer.ejs %>
 </body>
 </html>

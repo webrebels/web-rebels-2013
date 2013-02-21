@@ -4,26 +4,24 @@
 
     function mapSlideshowFlip ( ev ) {
 
-        var url = ev.target.href,
-            id = url.substr( url.indexOf('#') + 1 );
+        var url = ev.target.href;
+        var id = url.substr( url.indexOf('#') + 1 );
 
         if ( id === 'locationimages' ) {
             document.getElementById( 'locationimages' ).setAttribute('style', 'display: block;');
             document.getElementById( 'locationmap' ).setAttribute('style', 'display: none;');
         }
-
         if ( id === 'locationmap' ) {
             document.getElementById( 'locationimages' ).setAttribute('style', 'display: none;');
             document.getElementById( 'locationmap' ).setAttribute('style', 'display: block;');
         }
-
         ev.preventDefault();
-
     }
 
-    var venueListEl = document.querySelectorAll('#locationTogler')[ 0 ];
-    venueListEl.addEventListener('click', mapSlideshowFlip );
-    
+    var venueListEl = document.getElementById('locationTogler');
+    if (null !== venueListEl){
+        venueListEl.addEventListener('click', mapSlideshowFlip );
+    }
 
     var images = document.getElementById("locationimages");
     var img = document.getElementById("locationimg");
@@ -55,10 +53,10 @@
 
     // Do map
 
-    var map,
-        locations = {
-            venue : { title : 'Conference Venue', lat : 59.922807, lng : 10.751388 }
-        };
+    var map;
+    var locations = {
+        venue : { title : 'Conference Venue', lat : 59.922807, lng : 10.751388 }
+    };
 
     function hideMapLink() {
         var maplink = document.getElementsByClassName("maplink");

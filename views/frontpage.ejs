@@ -1,48 +1,141 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
-    <link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/style.css">
-    <title><%=pageTitle%></title>
-</head>
-<body id="body" class="front">
-    <div class="logo"></div>
+<% include snips/head.ejs %>
 
-    <menu class="menu">
-        <div class="left">
-            <a href="/location/">Location</a>
-            <a href="/tickets/">Tickets</a>
-            <a href="/speakers/">Speakers</a>
-        </div>
-        <div class="right">
-            <a href="/schedule/">Schedule</a>
-            <a href="/sponsors/">Sponsors</a>
-            <a href="/about/">About</a>
-        </div>
-    </menu>
+    <section class="wrap">
+      <article id="poster" class="poster">
+        <h1>All web, all the time</h1>
+        <h2>23rd - 24th of May</h2>
+        <h3>Oslo Norway</h3>
+      </article>
+    </section>
+  
+    <div class="separator"></div>
 
+    <section class="wrap">
 
-    <main class="main">
-        <a href="/speaker/#garann" class="speaker garann"></a>
-        <a href="/speaker/#robert" class="speaker robert"></a>
-        <a href="/speaker/#robert" class="speaker david"></a>
-        <a href="/speaker/#robert" class="speaker magnars"></a>
-    </main>
-    <script src="/js/script.js"></script>
+      <article class="slot row_a">
+        <a href="/speakers/#bodil">
+          <div class="img" style="background-image: url(/gfx/front_bodil.jpg);"></div>
+          <h2>Bodil Stokke</h2>
+        </a>
+      </article>
 
-    <footer class="foot">
-        <aside>
-            <div>
-                <h1 class="title">23-24th May</h1>
-                <h2 class="title">Oslo, Norway</h2>
-            </div>
-        </aside>
+      <article class="slot row_b">
+        <a href="/speakers/#david">
+          <div class="img" style="background-image: url(/gfx/front_david.jpg);"></div>
+          <h2>David Nolen</h2>
+        </a>
+      </article>
 
-        <section>
-            <!-- Sponsors goes here -->
-        </section>
-    </footer>
+      <article class="slot row_c">
+        <a href="/speakers/#garann">
+          <div class="img" style="background-image: url(/gfx/front_garann.jpg);"></div>
+          <h2>Garann Means</h2>
+        </a>
+      </article>
+
+      <article class="slot row_a">
+        <a href="/speakers/#jan">
+          <div class="img" style="background-image: url(/gfx/front_jan.jpg);"></div>
+          <h2>Jan Lenhardt</h2>
+        </a>
+      </article>
+
+      <article class="slot row_b">
+        <a href="/speakers/#mario">
+          <div class="img" style="background-image: url(/gfx/front_mario.jpg);"></div>
+          <h2>Dr.-Ing. Mario Heiderich</h2>
+        </a>
+      </article>
+
+      <article class="slot row_c">
+        <a href="/speakers/#reginald">
+          <div class="img" style="background-image: url(/gfx/front_reginald.jpg);"></div>
+          <h2>Reginald Braithwaite</h2>
+        </a>
+      </article>
+
+      <article class="slot row_a">
+        <a href="/speakers/#">
+          <div class="img tba"></div>
+          <h2>tba</h2>
+        </a>
+      </article>
+
+      <article class="slot row_b">
+        <a href="/speakers/#">
+          <div class="img tba"></div>
+          <h2>tba</h2>
+        </a>
+      </article>
+
+      <article class="slot row_c">
+        <a href="/speakers/#">
+          <div class="img tba"></div>
+          <h2>tba</h2>
+        </a>
+      </article>
+
+      <article class="slot row_a">
+        <a href="/speakers/#">
+          <div class="img tba"></div>
+          <h2>tba</h2>
+        </a>
+      </article>
+
+      <article class="slot row_b">
+        <a href="/speakers/#">
+          <div class="img tba"></div>
+          <h2>tba</h2>
+        </a>
+      </article>
+
+      <article class="slot row_c">
+        <a href="/speakers/#">
+          <div class="img tba"></div>
+          <h2>tba</h2>
+        </a>
+      </article>
+
+      <article class="slot row_a">
+        <a href="/speakers/#">
+          <div class="img tba"></div>
+          <h2>tba</h2>
+        </a>
+      </article>
+
+      <article class="slot row_b">
+        <a href="/speakers/#">
+          <div class="img tba"></div>
+          <h2>tba</h2>
+        </a>
+      </article>
+
+      <article class="slot row_c">
+        <a href="/speakers/#">
+          <div class="img tba"></div>
+          <h2>tba</h2>
+        </a>
+      </article>
+
+      <article class="slot row_d">
+        <a href="/speakers/#">
+          <div class="img tba"></div>
+          <h2>tba</h2>
+        </a>
+      </article>
+
+    </section>
+    <script>
+      (function(){
+        function randomImg() {
+          var imgs  = ['b0','b1','b2','b3','b4','b5','b6','b7','b8','b9','b10'],
+            random  = Math.floor(Math.random() * ((imgs.length - 1) - 0 + 1) + 0);
+          return imgs[random];
+        }
+        var poster = document.getElementById('poster');
+        poster.setAttribute('style', 'background-image: url("../gfx/' + randomImg() + '.jpg");');
+      }());
+    </script>
+    <% include snips/footer.ejs %>
 </body>
 </html>

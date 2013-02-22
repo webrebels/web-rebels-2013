@@ -21,6 +21,11 @@ body {
     font:                           100% sans-serif;                                                    /* ~16px; */
     line-height:                    1.5;
     -webkit-text-size-adjust:       none;
+    background: url(../gfx/bg.png) repeat-x 0 0,url(../gfx/bg-sand.png) repeat 0 0,#f5f1e8;
+}
+
+h1, h2 {
+    font-family:                    'Asap', sans-serif;
 }
 
 a {
@@ -44,7 +49,7 @@ tr:nth-child( even ) {
 
 }
 tr:nth-child( odd ) {
-    background-color:               rgb(250,250,245);    
+    background-color:               rgb(250,250,245);
 }
 td, th {
     padding:                        10px;
@@ -55,216 +60,35 @@ td ul {
     margin-left:                    4px;
 }
 
-.front .title {
-    font-family:                    'Asap', sans-serif;
-    text-align:                     right;
-    color:                          rgb(0,0,0);
-}
-.front h1.title{
-    font-size:                      2.3em;
-}
-.front h2.title{
-    font-size:                      1.525em;
-}
 
 
-.front {
-    background-repeat:              no-repeat;
-    background-position:            top center;
-    background-color:               rgb(0,0,0);
-    color:                          rgb(255,255,255);
-}
-
-.front .logo {
-    position:                       absolute;
-    top:                            10px;
-    left:                           30%;
-    width:                          40%;
-    height:                         120px;
-    background-image:               url("../gfx/wr_logo.svg");
-    background-repeat:              no-repeat;
-    background-position:            top center;
-    z-index:                        1000;
-}
-
-.front .menu {
-    position:                       absolute;
-    top:                            0;
-    height:                         80px;
-    width:                          100%;
-    font-family:                    'Asap', sans-serif;
-}
-
-
-.front .menu a {
-    background:                     rgba(255, 255, 255, 0.4);
-    color:                          rgb(255,255,255);
-    margin-top:                     45px;
-    padding-top:                    6px;
-    padding-bottom:                 6px;
-    padding-left:                   12px;
-    padding-right:                  12px;
-    text-decoration:                none;
-    display:                        table-cell;
-    border-radius:                  4px;
-}
-
-.front .menu .left {
-    position:                       absolute;
-    top:                            0;
-    left:                           0;
-    width:                          30%;
-    height:                         80px;
-}
-.front .menu .left a {
-    float:                          right;
-    margin-left:                    4px;
-}
-
-.front .menu .right {
-    position:                       absolute;
-    top:                            0;
-    right:                          0;
-    width:                          30%;
-    height:                         80px;
-}
-
-.front .menu .right a {
-    float:                          left;
-    margin-right:                   4px;
-}
-
-.front .main {
-    position:                       absolute;
-    top:                            80px;
-    bottom:                         200px;
-    display:                        block;
-    width:                          100%;
-}
-
-.front .foot {
-    position:                       absolute;
-    bottom:                         0;
-    height:                         200px;
-    width:                          100%;
-    background:                     rgba(255,255,255,0.8);
-}
-
-.front .foot section {
-    width:                          75%;
-    height:                         200px;
-    float:                          left;
-}
-
-.front .foot aside {
-    width:                          25%;
-    padding:                        20px;
-    height:                         200px;
-    float:                          right;
-    min-width:                      220px;
-}
-
-.front .foot aside div {
-    height:                         160px;
-    padding-left:                   20px;
-    overflow:                       hidden;
-    border-left:                    1px solid rgb(140,140,140);
-}
-
-
-.front .speaker {
-    position:                       absolute;
-    display:                        block;
-    border:                         6px solid rgb(178,128,89);
-    border-radius:                  90px;
-    background-color:                     rgb(255,255,255);
-    background-repeat:              no-repeat;
-    background-position:            top center;
-    height:                         180px;
-    width:                          180px;
-}
-
-.garann     { background-image:               url("../gfx/speaker_garann.jpg") }
-.robert     { background-image:               url("../gfx/speaker_robert.jpg") }
-.david      { background-image:               url("../gfx/speaker_robert.jpg") }
-.magnars    { background-image:               url("../gfx/speaker_robert.jpg") }
-
-.front .garann {
-    top:                            20%;
-    left:                           20%;
-}
-
-.front .robert {
-    top:                            30%;
-    left:                           40%;
-}
-
-.front .david {
-    top:                            70%;
-    left:                           60%;
-}
-
-.front .magnars {
-    top:                            10%;
-    left:                           80%;
-}
-
-.speakers {
-    width:                          100%;
-}
-
-.speaker .img {
-    height:                 180px;
-    width:                  180px;
-}
-.speakers .header {
-    font-size:              .813em;
-    font-weight:            300;
-    line-height:            20px;
-    padding:                0;
-    margin:                 8px 10px 4px 8px;
-}
-.speakers .subheader {
-    font-size:              .75em;
-    font-weight:            300;
-    line-height:            15px;
-    padding:                0;
-    margin:                 0 10px 3px 8px;
-}
-.speakers .info {
-    width:                  523px;
-    padding:                18px 18px 0 18px;
-}
-
-.speakers .info p {
-    font-size:              .875em;
-    font-weight:            300;
-    line-height:            26px;
-    margin-bottom:          18px;
-}
-
-
-
-
-.page {
-    background-image:               url("../gfx/bg.jpg");
-    background-color:               rgb(255,255,255);
-    color:                          rgb(0,0,0);
-}
-
-.page .logo,
-.page .menu,
-.page .wrap,
-.page .foot {
+/* Wrapper for sections in page */
+.logo,
+.menu,
+.wrap,
+.foot .footContainer {
     overflow:                       hidden;
     width:                          720px;
     margin-left:                    auto;
     margin-right:                   auto;
     padding:                        20px;
-    background-color:               rgb(255,255,255);
+    /* background-color:               rgba(255,255,255,0.3); */
 }
 
-.page .logo a {
+
+.separator {
+    margin-left:                    auto;
+    margin-right:                   auto;
+    width:                          250px;
+    height:                         40px;
+    background-image:               url("../gfx/separator.svg");
+    background-repeat:              no-repeat;
+    background-position:            center center;    
+}
+
+
+/* Logo at the top of the page */
+.logo a {
     display:                        block;
     height:                         120px;
     background-image:               url("../gfx/wr_logo.svg");
@@ -272,48 +96,152 @@ td ul {
     background-position:            top center;
 }
 
-.page .menu {
+
+/* Menu at the top of the page */
+.menu {
     padding-top:                    0;
     padding-bottom:                 0;
 }
 
-.page .menu a {
+.menu a {
     padding-top:                    8px;
-    padding-bottom:                 8px;
+    padding-bottom:                 4px;
     padding-right:                  5px;
     padding-left:                   5px;
     text-decoration:                none;
+    font-family:                    'Asap', sans-serif;
+    color:                          rgb(72, 72, 72);
+    text-shadow:                    rgba(255, 255, 255, 0.74902) 0px 1px 0px;
+    border-bottom:                  4px solid rgba(0, 0, 0, 0);
+}
+.menu a:hover {
     color:                          rgb(0,0,0);
+    border-bottom:                  4px solid rgb(140, 140, 140);
 }
 
-.page .menu .left a{
+.menu .left a{
     float:                          right;
 }
-.page .menu .right a{
+.menu .right a{
     float:                          left;
 }
 
-.page .menu div {
-    border-top:                     4px solid rgb(35,75,81);
-    border-bottom:                  4px solid rgb(35,75,81);
+.menu div {
+    border-top:                     1px solid rgb(140, 140, 140);
+    border-bottom:                  1px solid rgb(140, 140, 140);
     float:                          left;
     width:                          50%;
 
 }
 
-.page .foot a {
+
+/* Poster at frontpage */
+.poster {
+    position:                       relative;
+    height:                         350px;
+    border-radius:                  4px;
+}
+
+.poster h1,
+.poster h2,
+.poster h3 {
+    position:                       absolute;
+    right:                          0;
+    padding-left:                   10px;
+    padding-right:                  10px;
+    background-color:               rgba(255,255,255,0.7);
+    text-shadow:                    rgba(255, 255, 255, 0.74902) 0px 1px 0px;
+}
+.poster h1 {
+    top:                            200px;
+    font-size:                      2em;
+}
+.poster h2 {
+    top:                            250px;
+    font-size:                      1.625em;
+}
+.poster h3 {
+    top:                            273px;
+    font-size:                      1.225em;
+}
+
+/* Footer at the bottom of the page */
+.foot {
+    overflow:                       hidden;
+    background-color:               rgb(208,204,194);
+    background-image:               url(../gfx/bg.jpg);
+    height:                         150px;
+}
+.foot .footContainer {
+    height:                         150px;
+}
+.foot section {
+    float:                          left;
+    width:                          75%;
+}
+.foot aside {
+    float:                          right;
+    width:                          25%;
+    border-left:                    1px solid rgb(140, 140, 140);
+}
+.foot a,
+.foot a:visited {
     float:                          right;
     text-decoration:                none;
-    color:                          rgb(0,0,0);
-    margin-right:                   8px;
+    color:                          rgb(140, 140, 140);
 }
 
-.page h1,
-.page h2 {
-    font-family:                    'Asap', sans-serif;
+
+/* Frontpage */
+.slot {
+    position:               relative;
+    overflow:               hidden;
+    height:                 150px;
+    float:                  left;
+    background-color:       rgb(255,255,255);
+    margin-bottom:          20px;
+    border:                 4px solid rgb(255,255,255);
+    border-radius:          4px;
+    /* box-shadow:             rgb(187, 187, 187) 0px 1px 4px 0px; */
+}
+.slot .img {
+    width:                  100%;
+    height:                 142px;
+    background-repeat:      no-repeat;
+    background-position:    top center;
+}
+.slot a h2 {
+    position:               absolute;
+    bottom:                 0;
+    height:                 40px;
+    padding-left:           8px;
+    padding-top:            4px;
+    width:                  100%;
+    font-size:              1.076em;
+    background-color:       rgba(0,0,0,0.5);
+    color:                  rgb(255,255,255);
+}
+.row_a {
+    width:                  212px;
+    margin-right:           10px;
+}
+.row_b {
+    width:                  214px;
+    margin-right:           10px;
+    margin-left:            10px;
+}
+.row_c {
+    width:                  212px;
+    margin-left:            10px;
+}
+.row_d {
+    width:                  214px;
+    margin-left:            232px;
 }
 
-.page p,
+
+
+p,
 .imageFrame {
     margin-bottom:                  20px;
 }
@@ -334,12 +262,13 @@ td ul {
 }
 
 /** Map and image box styles **/
-
 .imageFrame {
     overflow:                       hidden;
     display:                        block;
-    border:                         2px solid rgb(35,75,81);
-    padding:                        4px;
+    background-color:               rgb(255,255,255);
+    margin-bottom:                  20px;
+    border:                         4px solid rgb(255,255,255);
+    border-radius:                  4px;
 }
 
 .map {
@@ -356,6 +285,7 @@ td ul {
     position:                       relative;
     overflow:                       hidden;
     height:                         288px;
+    width:                          100%;
 }
 
 .images img {
@@ -389,18 +319,31 @@ td ul {
     right:                          0;
 }
 
-/*.mapbox .images .slide {
-    position:                       absolute;
-    top:                            0;
-    left:                           0;
-}*/
+#locationTogler {
+    margin-left:                    0;
+    padding-left:                   0;
+    margin-bottom:                  0;
+    padding-bottom:                 0;
+}
+#locationIll {
+    background-image:               url("../gfx/bg.jpg");
+}
+#locationTogler  a, #locationTogler  a:visited {
+    padding:                        5px;
+    background-image:               url("../gfx/bg.jpg");
+    text-decoration:                none;
+    color:                          rgb(138,138,76);;
+}
+#locationTogler a:hover {
+    background-color:               #8C8C8C;
+    color:                          #484848;
+    background-image:               none;
+}
 
-
-
-
-/* Speakers */
+/* Speakers page */
 .speaker {
     overflow:                       hidden;
+    margin-top:                     20px;
     margin-bottom:                  20px;
 }
 .speaker img {
@@ -408,9 +351,7 @@ td ul {
     margin-right:                   20px;
 }
 
-
-
-/* Schedule */
+/* Schedule page  */
 .schedule {
     width:                  680px;
 }
@@ -432,6 +373,8 @@ article ul {
     padding: 0 2em 1em 2em;
 }
 
+
+
 @media screen and (max-width: 720px) {
     .page .logo, .page .menu, .page .wrap, .page .foot {
         width: auto;
@@ -448,7 +391,7 @@ article ul {
     img {
         max-width: 100%;
     }
-    
+
     .fullWidthImg {
         height: auto;
     }

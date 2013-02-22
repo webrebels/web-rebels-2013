@@ -6,13 +6,14 @@
 }
 
 /* Normalizing elements */
-body, menu, h1, h2, a, section, aside, main, div, p, ul, li, form, input, button, fieldset {
+body, menu, h1, h2, a, section, aside, menu, div, p, ul, li, form, input, button, fieldset {
     margin:                         0;
     padding:                        0;
 }
 
 ul {
-    list-style:                     none;
+    list-style:                     disc;
+    padding:                        0 2em 1em 2em;
 }
 
 
@@ -21,7 +22,7 @@ body {
     font:                           100% sans-serif;                                                    /* ~16px; */
     line-height:                    1.5;
     -webkit-text-size-adjust:       none;
-    background: url(../gfx/bg.png) repeat-x 0 0,url(../gfx/bg-sand.png) repeat 0 0,#f5f1e8;
+    background:                     url(../gfx/bg.png) repeat-x 0 0,url(../gfx/bg-sand.png) repeat 0 0,#f5f1e8;
 }
 
 h1, h2 {
@@ -36,11 +37,13 @@ a:visited {
 }
 
 table {
-    width:                          96%;
     border-collapse:                collapse;
+    width:                          100%;
     margin-bottom:                  20px;
+    border-bottom:                  1px solid rgb(140, 140, 140);
 }
 th {
+    font-family:                    'Asap', sans-serif;
     background-color:               rgb(202,202,174);
     text-align:                     left;
 }
@@ -60,7 +63,7 @@ td ul {
     margin-left:                    4px;
 }
 
-p { 
+p {
     margin-bottom:                  20px;
 }
 
@@ -69,24 +72,19 @@ p {
 .logo,
 .menu,
 .wrap,
-.foot .footContainer {
+.footContainer {
     overflow:                       hidden;
-    width:                          720px;
-    margin-left:                    auto;
-    margin-right:                   auto;
-    padding:                        20px;
+    width:                          680px;
+    margin:                         20px auto;
 }
 
 
 /* Separator with shull */
 .separator {
-    margin-left:                    auto;
-    margin-right:                   auto;
+    margin:                         20px auto;
     width:                          250px;
     height:                         40px;
-    background-image:               url("../gfx/separator.svg");
-    background-repeat:              no-repeat;
-    background-position:            center center;    
+    background:                     url("../gfx/separator.svg") no-repeat center center;
 }
 
 
@@ -101,64 +99,40 @@ p {
 
 
 /* Logo at the top of the page */
-.logo a {
-    display:                        block;
+.logo {
     height:                         120px;
-    background-image:               url("../gfx/wr_logo.svg");
-    background-repeat:              no-repeat;
-    background-position:            top center;
+    background:                     url("../gfx/wr_logo.svg") no-repeat top center;
 }
 
 
 /* Menu at the top of the page */
 .menu {
-    padding-top:                    0;
-    padding-bottom:                 0;
+    padding:                        5px 0;
+    border-top:                     1px solid rgb(140, 140, 140);
+    border-bottom:                  1px solid rgb(140, 140, 140);
+    text-align:                     center;
 }
 
 .menu a {
-    padding-top:                    8px;
-    padding-bottom:                 4px;
-    padding-right:                  5px;
-    padding-left:                   5px;
+    margin:                         0 5px;
     text-decoration:                none;
     font-family:                    'Asap', sans-serif;
     color:                          rgb(72, 72, 72);
     text-shadow:                    rgba(255, 255, 255, 0.74902) 0px 1px 0px;
-    border-bottom:                  4px solid rgba(0, 0, 0, 0);
 }
+
 .menu a:hover {
     color:                          rgb(0,0,0);
-    border-bottom:                  4px solid rgb(140, 140, 140);
-}
-
-.menu .left a{
-    float:                          right;
-}
-.menu .right a{
-    float:                          left;
-}
-
-.menu div {
-    border-top:                     1px solid rgb(140, 140, 140);
-    border-bottom:                  1px solid rgb(140, 140, 140);
-    float:                          left;
-    width:                          50%;
-
 }
 
 
 /* Footer at the bottom of each page */
 .foot {
     overflow:                       hidden;
-    background-color:               rgb(208,204,194);
     background-image:               url(../gfx/bg.jpg);
-    height:                         150px;
     color:                          rgb(140, 140, 140);
 }
-.foot .footContainer {
-    height:                         150px;
-}
+
 .foot section {
     float:                          left;
     width:                          75%;
@@ -176,7 +150,7 @@ p {
 }
 
 
-/* Poster at top of frontpage */
+/* Frontpage */
 .poster {
     position:                       relative;
     height:                         350px;
@@ -188,8 +162,7 @@ p {
 .poster h3 {
     position:                       absolute;
     right:                          0;
-    padding-left:                   10px;
-    padding-right:                  10px;
+    padding:                        0 10px;
     background-color:               rgba(255,255,255,0.7);
     text-shadow:                    rgba(255, 255, 255, 0.74902) 0px 1px 0px;
 }
@@ -209,83 +182,50 @@ p {
 
 /* Frontpage */
 .slot {
-    position:               relative;
-    overflow:               hidden;
-    height:                 150px;
-    float:                  left;
-    background-color:       rgb(255,255,255);
-    margin-bottom:          20px;
-    border:                 4px solid rgb(255,255,255);
-    border-radius:          4px;
-    /* box-shadow:             rgb(187, 187, 187) 0px 1px 4px 0px; */
+    position:                       relative;
+    overflow:                       hidden;
+    height:                         150px;
+    float:                          left;
+    background-color:               rgb(255,255,255);
+    margin-bottom:                  20px;
+    border:                         4px solid rgb(255,255,255);
+    border-radius:                  4px;
+    /* box-shadow:                     rgb(187, 187, 187) 0px 1px 4px 0px; */
 }
 .slot .img {
-    width:                  100%;
-    height:                 142px;
-    background-repeat:      no-repeat;
-    background-position:    top center;
+    width:                          100%;
+    height:                         142px;
+    background-repeat:              no-repeat;
+    background-position:            top center;
 }
 .slot a h2 {
-    position:               absolute;
-    bottom:                 0;
-    height:                 40px;
-    padding-left:           8px;
-    padding-top:            4px;
-    width:                  100%;
-    font-size:              1.076em;
-    background-color:       rgba(0,0,0,0.5);
-    color:                  rgb(255,255,255);
+    position:                       absolute;
+    bottom:                         0;
+    height:                         40px;
+    padding:                        4px 0 0 8px;
+    width:                          100%;
+    font-size:                      1.076em;
+    background-color:               rgba(0,0,0,0.5);
+    color:                          rgb(255,255,255);
 }
 .row_a {
-    width:                  212px;
-    margin-right:           10px;
+    width:                          212px;
+    margin-right:                   10px;
 }
 .row_b {
-    width:                  214px;
-    margin-right:           10px;
-    margin-left:            10px;
+    width:                          214px;
+    margin:                         0 10px;
 }
 .row_c {
-    width:                  212px;
-    margin-left:            10px;
+    width:                          212px;
+    margin-left:                    10px;
 }
 .row_d {
-    width:                  214px;
-    margin-left:            232px;
+    width:                          214px;
+    margin-left:                    232px;
 }
 
-.sponsors {
-    color:                      rgb(140, 140, 140);    
-}
-.sponsors p {
-    margin:                     0;
-}
-.sponsors a {
-    display:                    block;
-    width:                      102px;
-    height:                     80px;
-    color:                      rgb(140, 140, 140);
-    border:                     1px solid rgb(140, 140, 140);
-    background-color:           rgb(255, 255, 255) !important;
-    border-right:               14px 12px;
-    float:                      left;
-    margin-right:               2px;
-}
-.sponsor.kodemaker {
-    background:                 url("/gfx/sponsors/sponsor-kodemaker.png") no-repeat ;
-    background-position:        2px 30px;
-}
-.sponsor.finn {
-                                background: url("/gfx/sponsors/sponsor-finn.png") no-repeat;
-                                background-position: 2px 23px;
-}
-.sponsor.arktekk {
-                                background: url("/gfx/sponsors/sponsor-arktekk.png") no-repeat;
-}
-.sponsor.bekk {
-                                background: url("/gfx/sponsors/sponsor-bekk.png") no-repeat;
-                                background-position: 2px 23px;
-}
+
 
 .huge {
     font-size: 250%;
@@ -382,12 +322,6 @@ p {
 }
 
 /* Schedule page  */
-.schedule {
-    width:                  680px;
-}
-.schedule th {
-    text-align:             left;
-}
 .schedule .time {
     width:                  100px;
 }
@@ -398,10 +332,43 @@ p {
     line-height:            22px;
 }
 
-article ul {
-    list-style: disc;
-    padding: 0 2em 1em 2em;
+
+
+.sponsors {
+    color:                      rgb(140, 140, 140);
 }
+.sponsors p {
+    margin:                     0;
+}
+.sponsors a {
+    display:                    block;
+    width:                      102px;
+    height:                     80px;
+    color:                      rgb(140, 140, 140);
+    border:                     1px solid rgb(140, 140, 140);
+    background-color:           rgb(255, 255, 255) !important;
+    border-right:               14px 12px;
+    float:                      left;
+    margin-right:               2px;
+}
+.sponsor.kodemaker {
+    background:                 url("/gfx/sponsors/sponsor-kodemaker.png") no-repeat ;
+    background-position:        2px 30px;
+}
+.sponsor.finn {
+                                background: url("/gfx/sponsors/sponsor-finn.png") no-repeat;
+                                background-position: 2px 23px;
+}
+.sponsor.arktekk {
+                                background: url("/gfx/sponsors/sponsor-arktekk.png") no-repeat;
+}
+.sponsor.bekk {
+                                background: url("/gfx/sponsors/sponsor-bekk.png") no-repeat;
+                                background-position: 2px 23px;
+}
+
+
+
 @media screen and (max-width: 720px) {
     .page .logo, .page .menu, .page .wrap, .page .foot {
         width: auto;
@@ -411,7 +378,7 @@ article ul {
         margin-left: 0;
     }
     .row_a:nth-child(odd), .row_b:nth-child(odd), .row_c:nth-child(odd) {
-        margin-left: 13%; 
+        margin-left: 13%;
         margin-right: 20px;
     }
     .schedule {
@@ -442,6 +409,7 @@ article ul {
         margin-left: 10% !important;
     }
 }
+
 #surprompen {
     display: none;
 }

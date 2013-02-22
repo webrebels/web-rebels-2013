@@ -135,18 +135,45 @@ p {
 
 .foot section {
     float:                          left;
-    width:                          75%;
+    width:                          580px;
+    border-right:                   1px solid rgb(140, 140, 140);
 }
 .foot aside {
     float:                          right;
-    width:                          25%;
-    border-left:                    1px solid rgb(140, 140, 140);
+    width:                          100px;
 }
-.foot a,
-.foot a:visited {
+.foot aside a,
+.foot aside a:visited {
     float:                          right;
     text-decoration:                none;
     color:                          rgb(140, 140, 140);
+}
+
+.sponsors a {
+    display:                        block;
+    float:                          left;
+    width:                          130px;
+    height:                         100px;
+    margin:                         0 5px 10px 5px;
+    border-radius:                  4px;
+
+
+}
+.sponsor.kodemaker {
+    background:                     url("/gfx/sponsors/sponsor-kodemaker.png") no-repeat center center;
+    background-color:               rgb(255, 255, 255);
+}
+.sponsor.finn {
+    background:                     url("/gfx/sponsors/sponsor-finn.png") no-repeat center center;
+    background-color:               rgb(255, 255, 255);
+}
+.sponsor.arktekk {
+    background:                     url("/gfx/sponsors/sponsor-arktekk.png") no-repeat center center;
+    background-color:               rgb(255, 255, 255);
+}
+.sponsor.bekk {
+    background:                     url("/gfx/sponsors/sponsor-bekk.png") no-repeat center center;
+    background-color:               rgb(255, 255, 255);
 }
 
 
@@ -156,7 +183,6 @@ p {
     height:                         350px;
     border-radius:                  4px;
 }
-
 .poster h1,
 .poster h2,
 .poster h3 {
@@ -179,8 +205,6 @@ p {
     font-size:                      1.225em;
 }
 
-
-/* Frontpage */
 .slot {
     position:                       relative;
     overflow:                       hidden;
@@ -190,7 +214,6 @@ p {
     margin-bottom:                  20px;
     border:                         4px solid rgb(255,255,255);
     border-radius:                  4px;
-    /* box-shadow:                     rgb(187, 187, 187) 0px 1px 4px 0px; */
 }
 .slot .img {
     width:                          100%;
@@ -223,6 +246,28 @@ p {
 .row_d {
     width:                          214px;
     margin-left:                    232px;
+}
+
+
+/* Speakers page */
+.speaker {
+    overflow:                       hidden;
+}
+.speaker img {
+    float:                          left;
+    margin-right:                   20px;
+}
+
+
+/* Schedule page  */
+.schedule .time {
+    width:                          100px;
+}
+.schedule .title {
+    width:                          170px;
+}
+.schedule .additional {
+    line-height:                    22px;
 }
 
 
@@ -307,64 +352,6 @@ p {
     margin-right:                   10px;
     margin-top:                     5px;
     margin-bottom:                  5px;
-}
-
-
-/* Speakers page */
-.speaker {
-    overflow:                       hidden;
-    margin-top:                     20px;
-    margin-bottom:                  20px;
-}
-.speaker img {
-    float:                          left;
-    margin-right:                   20px;
-}
-
-/* Schedule page  */
-.schedule .time {
-    width:                  100px;
-}
-.schedule .title {
-    width:                  170px;
-}
-.schedule .additional {
-    line-height:            22px;
-}
-
-
-
-.sponsors {
-    color:                      rgb(140, 140, 140);
-}
-.sponsors p {
-    margin:                     0;
-}
-.sponsors a {
-    display:                    block;
-    width:                      102px;
-    height:                     80px;
-    color:                      rgb(140, 140, 140);
-    border:                     1px solid rgb(140, 140, 140);
-    background-color:           rgb(255, 255, 255) !important;
-    border-right:               14px 12px;
-    float:                      left;
-    margin-right:               2px;
-}
-.sponsor.kodemaker {
-    background:                 url("/gfx/sponsors/sponsor-kodemaker.png") no-repeat ;
-    background-position:        2px 30px;
-}
-.sponsor.finn {
-                                background: url("/gfx/sponsors/sponsor-finn.png") no-repeat;
-                                background-position: 2px 23px;
-}
-.sponsor.arktekk {
-                                background: url("/gfx/sponsors/sponsor-arktekk.png") no-repeat;
-}
-.sponsor.bekk {
-                                background: url("/gfx/sponsors/sponsor-bekk.png") no-repeat;
-                                background-position: 2px 23px;
 }
 
 

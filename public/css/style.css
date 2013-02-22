@@ -154,6 +154,7 @@ p {
     background-color:               rgb(208,204,194);
     background-image:               url(../gfx/bg.jpg);
     height:                         150px;
+    color:                          rgb(140, 140, 140);
 }
 .foot .footContainer {
     height:                         150px;
@@ -253,8 +254,38 @@ p {
     margin-left:            232px;
 }
 
-
-
+.sponsors {
+    color:                      rgb(140, 140, 140);    
+}
+.sponsors p {
+    margin:                     0;
+}
+.sponsors a {
+    display:                    block;
+    width:                      102px;
+    height:                     80px;
+    color:                      rgb(140, 140, 140);
+    border:                     1px solid rgb(140, 140, 140);
+    background-color:           rgb(255, 255, 255) !important;
+    border-right:               14px 12px;
+    float:                      left;
+    margin-right:               2px;
+}
+.sponsor.kodemaker {
+    background:                 url("/gfx/sponsors/sponsor-kodemaker.png") no-repeat ;
+    background-position:        2px 30px;
+}
+.sponsor.finn {
+                                background: url("/gfx/sponsors/sponsor-finn.png") no-repeat;
+                                background-position: 2px 23px;
+}
+.sponsor.arktekk {
+                                background: url("/gfx/sponsors/sponsor-arktekk.png") no-repeat;
+}
+.sponsor.bekk {
+                                background: url("/gfx/sponsors/sponsor-bekk.png") no-repeat;
+                                background-position: 2px 23px;
+}
 
 .huge {
     font-size: 250%;
@@ -370,32 +401,6 @@ p {
 article ul {
     list-style: disc;
     padding: 0 2em 1em 2em;
-}
-
-.sponsors a {
-    display: block;
-    width: 102px;
-    height: 80px;
-    border: 1px solid rgb(140, 140, 140);
-    background-color: rgb(255, 255, 255) !important;
-    border-right: 14px 12px;
-    float: left;
-    margin-right: 2px;
-}
-.sponsor.kodemaker {
-    background: url("/gfx/sponsors/sponsor-kodemaker.png") no-repeat ;
-    background-position: 2px 30px;
-}
-.sponsor.finn {
-    background: url("/gfx/sponsors/sponsor-finn.png") no-repeat;
-    background-position: 2px 23px;
-}
-.sponsor.arktekk {
-    background: url("/gfx/sponsors/sponsor-arktekk.png") no-repeat;
-}
-.sponsor.bekk {
-    background: url("/gfx/sponsors/sponsor-bekk.png") no-repeat;
-    background-position: 2px 23px;
 }
 @media screen and (max-width: 720px) {
     .page .logo, .page .menu, .page .wrap, .page .foot {

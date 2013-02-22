@@ -16,7 +16,7 @@
     "javascript",
     "web"
   ],
-  "homepage": "http://wr13.jit.su/",
+  "homepage": "http://webreb2013.jit.su/",
   "scripts": {
     "start": "node ./bin/server.js"
   },
@@ -37,7 +37,11 @@
     "url": "https://github.com/webrebels/web-rebels-2013/issues"
   },
   "licenses": [],
-  "subdomain": "webreb2013",
+  "subdomain": "www",
+  "domains": [
+    "www.webrebels.org",
+    "webrebels.org"
+  ],
   "dependencies": {
     "express": "3.x",
     "ejs": "*"

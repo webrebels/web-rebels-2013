@@ -417,6 +417,9 @@ article ul {
     .schedule {
         width: auto;
     }
+    .menu .right a:nth-child(3) {
+        padding-right: 45px;
+    }
 
     .half {
         width: auto;

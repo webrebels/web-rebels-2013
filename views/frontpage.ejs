@@ -1,4 +1,17 @@
-<% include snips/head.ejs %>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/style.css">
+    <title><%=pageTitle%></title>
+    <% include snips/analytics.ejs %>
+</head>
+<body class="page">
+
+  <% include snips/logo.ejs %>
+  <% include snips/menu.ejs %>
 
     <section class="wrap">
       <article id="poster" class="poster">
@@ -7,7 +20,7 @@
         <h3>Oslo Norway</h3>
       </article>
     </section>
-  
+
     <div class="separator"></div>
 
     <section class="wrap">
@@ -125,6 +138,7 @@
       </article>
 
     </section>
+
     <script>
       (function(){
         function randomImg() {
@@ -136,6 +150,8 @@
         poster.setAttribute('style', 'background-image: url("../gfx/' + randomImg() + '.jpg");');
       }());
     </script>
+
     <% include snips/footer.ejs %>
+
 </body>
 </html>

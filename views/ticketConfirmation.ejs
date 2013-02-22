@@ -1,19 +1,34 @@
-<% include snips/head.ejs %>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/style.css">
+    <title><%=pageTitle%></title>
+    <% include snips/analytics.ejs %>
+</head>
+<body class="page">
 
-<article class="wrap">
-	<h1>Ahoy, thank you!</h1>
-	<p>We look forward to seeing you in Oslo for this year's Web Rebels!</p>
+  <% include snips/logo.ejs %>
+  <% include snips/menu.ejs %>
 
-	<p>
-      Please do not hesitate to
-      <a href="mailto:crew[insert at here]webrebels.org">contact us</a>
-      with any questions or enquiries you might have. We are more than
-      happy to help you plan your trip or other practicalities related
-      to your stay in Oslo.
-    </p>
+    <article class="wrap">
+    	<h1>Ahoy, thank you!</h1>
+    	<p>We look forward to seeing you in Oslo for this year's Web Rebels!</p>
+
+    	<p>
+          Please do not hesitate to
+          <a href="mailto:crew[insert at here]webrebels.org">contact us</a>
+          with any questions or enquiries you might have. We are more than
+          happy to help you plan your trip or other practicalities related
+          to your stay in Oslo.
+        </p>
 
 
-</article>
+    </article>
+
     <% include snips/footer.ejs %>
+
 </body>
 </html>

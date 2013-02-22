@@ -1,4 +1,18 @@
-<% include snips/head.ejs %>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/style.css">
+    <title><%=pageTitle%></title>
+    <% include snips/analytics.ejs %>
+</head>
+<body class="page">
+
+  <% include snips/logo.ejs %>
+  <% include snips/menu.ejs %>
+
     <article class="wrap">
 
         <p>
@@ -90,7 +104,7 @@
           SAS generally offers a more comfortable flight, but
           Norwegian offers free in-flight wifi.
         </p>
-        
+
         <div class="separator"></div>
 
         <h2>From Oslo Airport</h2>
@@ -104,9 +118,9 @@
           transport aplenty. If you're staying at the conference
           hotel, see the guide for getting to the venue above.
         </p>
-        
+
         <div class="separator"></div>
-        
+
         <h2>Staying in Oslo</h2>
         <p>
           There are several great hotels within walking distance of
@@ -141,7 +155,7 @@
           of rock'n roll Oslo</a> and still within decent walking
           distance of the venue. Free wifi, naturally.
         </p>
-        
+
         <div class="separator"></div>
         <h2>Splurge</h2>
         <p>
@@ -161,7 +175,9 @@
         </p>
     </article>
 
-    <script src="/js/location.js"></script>
     <% include snips/footer.ejs %>
+
+    <script src="/js/location.js"></script>
+
 </body>
 </html>

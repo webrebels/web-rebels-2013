@@ -1,4 +1,17 @@
-<% include snips/head.ejs %>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/style.css">
+    <title><%=pageTitle%></title>
+    <% include snips/analytics.ejs %>
+</head>
+<body class="page">
+
+  <% include snips/logo.ejs %>
+  <% include snips/menu.ejs %>
 
     <article class="wrap">
         <h1>Speakers</h1>
@@ -63,5 +76,6 @@
     </article>
 
     <% include snips/footer.ejs %>
+
 </body>
 </html>

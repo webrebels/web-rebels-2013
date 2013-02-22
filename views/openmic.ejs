@@ -6,14 +6,7 @@
     <link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/css/style.css">
     <title><%=pageTitle%></title>
-    <script>
-        var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-26864429-1']); _gaq.push(['_setDomainName', 'webrebels.org']); _gaq.push(['_trackPageview']);
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
+    <% include snips/analytics.ejs %>
 </head>
 <body class="page">
 
@@ -40,17 +33,7 @@
             <li>Batches of 10 minute lightning talks from our Call For Papers</li>
             <li>Hang out with speakers and attendants whom you'll be spending the next couple of days with</li>
         </ul>
-        <!--<p>
-          On the 22th of May we will host a small pre-party. During
-          this pre-party we will run a few 30 minutes Open Mic
-          lightning talk sessions. The location is large enough for
-          most of our attendees, but the stage area will be small and
-          intimate. It's all shoulders down in a relaxed environment
-          with no high expectations. Think of this as a pre-party
-          where you get to know everyone who will be at the conference
-          and this is an opportunity to get a head start before the
-          big event.
-        </p>-->
+
         <p><strong>Dear attendee: this is your night!</strong></p>
 
         <p>
@@ -96,6 +79,8 @@
           speaking can get a chance to do so during Web Rebels.
         </p>
     </article>
+
     <% include snips/footer.ejs %>
+
 </body>
 </html>

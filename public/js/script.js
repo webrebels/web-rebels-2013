@@ -1,9 +1,20 @@
 (function(){
-	function randomImg() {
-		var imgs 	= ['b0','b1','b2','b3','b4'],
-			random 	= Math.floor(Math.random() * ((imgs.length - 1) - 0 + 1) + 0);
-		return imgs[random];
-	}
-	var body = document.getElementById('body');
-	body.setAttribute('style', 'background-image: url("../gfx/' + randomImg() + '.jpg");');
+    var supportedBrowser = (
+        !!document.querySelectorAll &&
+        !!document.getElementsByClassName
+    );
+
+    /* Toggle off message for older browsers */
+    var surprompenEl    = document.getElementById('surprompen');
+    var pageEl          = document.querySelectorAll('.wrap')[0];
+
+    if (!supportedBrowser) {
+        surprompenEl.style.display = 'block';
+        pageEl.style.display = 'none';
+    }
+
+    surprompenEl.onclick = function () {
+        surprompenEl.style.display = 'none';
+        pageEl.style.display = 'block';
+    };
 }())

@@ -378,7 +378,14 @@ article ul {
     .page .logo, .page .menu, .page .wrap, .page .foot {
         width: auto;
     }
-
+    .row_a, .row_b, .row_c, .row_d {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .row_a:nth-child(odd), .row_b:nth-child(odd), .row_c:nth-child(odd) {
+        margin-left: 13%; 
+        margin-right: 20px;
+    }
     .schedule {
         width: auto;
     }
@@ -394,4 +401,16 @@ article ul {
     .fullWidthImg {
         height: auto;
     }
+}
+@media screen and (max-width: 480px) {
+    .poster {
+        background-position-x: -140px;
+    }
+    .row_a, .row_b, .row_c, .row_d {
+        margin-right: 0;
+        margin-left: 10% !important;
+    }
+}
+#surprompen {
+    display: none;
 }

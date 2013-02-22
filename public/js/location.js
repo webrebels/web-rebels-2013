@@ -2,9 +2,9 @@
 
 // Flip map / slideshow
 
-    function mapSlideshowFlip ( ev ) {
+    function mapSlideshowFlip(ev, el) {
 
-        var url = ev.target.href;
+        var url = el.href;
         var id = url.substr( url.indexOf('#') + 1 );
 
         if ( id === 'locationimages' ) {
@@ -18,10 +18,15 @@
         ev.preventDefault();
     }
 
-    var venueListEl = document.getElementById('locationTogler');
-    if (null !== venueListEl){
-        venueListEl.addEventListener('click', mapSlideshowFlip );
-    }
+    var togleButtonImages = document.getElementById('togleButtonImages');
+    var togleButtonMap = document.getElementById('togleButtonMap');
+    togleButtonImages.addEventListener('click', function(ev){
+        mapSlideshowFlip(ev, togleButtonImages);
+    });
+    togleButtonMap.addEventListener('click', function(ev){
+        mapSlideshowFlip(ev, togleButtonMap);
+    });
+
 
     var images = document.getElementById("locationimages");
     var img = document.getElementById("locationimg");

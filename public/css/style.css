@@ -60,9 +60,12 @@ td ul {
     margin-left:                    4px;
 }
 
+p { 
+    margin-bottom:                  20px;
+}
 
 
-/* Wrapper for sections in page */
+/* Wrapper for sections in a page */
 .logo,
 .menu,
 .wrap,
@@ -72,10 +75,10 @@ td ul {
     margin-left:                    auto;
     margin-right:                   auto;
     padding:                        20px;
-    /* background-color:               rgba(255,255,255,0.3); */
 }
 
 
+/* Separator with shull */
 .separator {
     margin-left:                    auto;
     margin-right:                   auto;
@@ -84,6 +87,16 @@ td ul {
     background-image:               url("../gfx/separator.svg");
     background-repeat:              no-repeat;
     background-position:            center center;    
+}
+
+
+/* General map and image box styles */
+.imageFrame {
+    overflow:                       hidden;
+    display:                        block;
+    background-color:               rgb(255,255,255);
+    border:                         4px solid rgb(255,255,255);
+    border-radius:                  4px;
 }
 
 
@@ -135,7 +148,34 @@ td ul {
 }
 
 
-/* Poster at frontpage */
+/* Footer at the bottom of each page */
+.foot {
+    overflow:                       hidden;
+    background-color:               rgb(208,204,194);
+    background-image:               url(../gfx/bg.jpg);
+    height:                         150px;
+}
+.foot .footContainer {
+    height:                         150px;
+}
+.foot section {
+    float:                          left;
+    width:                          75%;
+}
+.foot aside {
+    float:                          right;
+    width:                          25%;
+    border-left:                    1px solid rgb(140, 140, 140);
+}
+.foot a,
+.foot a:visited {
+    float:                          right;
+    text-decoration:                none;
+    color:                          rgb(140, 140, 140);
+}
+
+
+/* Poster at top of frontpage */
 .poster {
     position:                       relative;
     height:                         350px;
@@ -163,32 +203,6 @@ td ul {
 .poster h3 {
     top:                            273px;
     font-size:                      1.225em;
-}
-
-/* Footer at the bottom of the page */
-.foot {
-    overflow:                       hidden;
-    background-color:               rgb(208,204,194);
-    background-image:               url(../gfx/bg.jpg);
-    height:                         150px;
-}
-.foot .footContainer {
-    height:                         150px;
-}
-.foot section {
-    float:                          left;
-    width:                          75%;
-}
-.foot aside {
-    float:                          right;
-    width:                          25%;
-    border-left:                    1px solid rgb(140, 140, 140);
-}
-.foot a,
-.foot a:visited {
-    float:                          right;
-    text-decoration:                none;
-    color:                          rgb(140, 140, 140);
 }
 
 
@@ -241,10 +255,7 @@ td ul {
 
 
 
-p,
-.imageFrame {
-    margin-bottom:                  20px;
-}
+
 .huge {
     font-size: 250%;
 }
@@ -261,30 +272,17 @@ p,
     clear:                          all;
 }
 
-/** Map and image box styles **/
-.imageFrame {
-    overflow:                       hidden;
-    display:                        block;
-    background-color:               rgb(255,255,255);
-    margin-bottom:                  20px;
-    border:                         4px solid rgb(255,255,255);
-    border-radius:                  4px;
-}
-
 .map {
-    height:                         288px;
+    height:                         500px;
     width:                          100%;
     overflow:                       hidden;
 }
 
-.map {
-    margin-top:                     20px;
-}
 
 .images {
     position:                       relative;
     overflow:                       hidden;
-    height:                         288px;
+    height:                         500px;
     width:                          100%;
 }
 
@@ -320,25 +318,26 @@ p,
 }
 
 #locationTogler {
-    margin-left:                    0;
-    padding-left:                   0;
-    margin-bottom:                  0;
-    padding-bottom:                 0;
+    overflow:                       hidden;
 }
-#locationIll {
-    background-image:               url("../gfx/bg.jpg");
-}
-#locationTogler  a, #locationTogler  a:visited {
-    padding:                        5px;
-    background-image:               url("../gfx/bg.jpg");
+
+.toglerButton {
+    overflow:                       hidden;
+    float:                          right;
+    margin-right:                   4px;
+    background-color:               rgb(255,255,255);
     text-decoration:                none;
-    color:                          rgb(138,138,76);;
+    border-bottom-left-radius:      4px;
+    border-bottom-right-radius:     4px;
 }
-#locationTogler a:hover {
-    background-color:               #8C8C8C;
-    color:                          #484848;
-    background-image:               none;
+.toglerButton span {
+    display:                        block;
+    margin-left:                    10px;
+    margin-right:                   10px;
+    margin-top:                     5px;
+    margin-bottom:                  5px;
 }
+
 
 /* Speakers page */
 .speaker {

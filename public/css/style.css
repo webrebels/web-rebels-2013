@@ -6,7 +6,7 @@
 }
 
 /* Normalizing elements */
-body, menu, h1, h2, a, section, aside, menu, div, p, ul, li, form, input, button, fieldset {
+body, menu, h1, h2, h3, a, section, aside, menu, div, p, ul, li {
     margin:                         0;
     padding:                        0;
 }
@@ -25,8 +25,20 @@ body {
     background:                     url(../gfx/bg.png) repeat-x 0 0,url(../gfx/bg-sand.png) repeat 0 0,#f5f1e8;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family:                    'Asap', sans-serif;
+}
+h1 {
+    font-size:                      1.675em;
+}
+h2 {
+    font-size:                      1.425em;
+}
+h3 {
+    font-size:                      1.075em;
+}
+p {
+    margin-bottom:                  20px;
 }
 
 a {
@@ -63,10 +75,6 @@ td ul {
     margin-left:                    4px;
 }
 
-p {
-    margin-bottom:                  20px;
-}
-
 
 /* Wrapper for sections in a page */
 .logo,
@@ -82,7 +90,7 @@ p {
 /* Separator with shull */
 .separator {
     margin:                         20px auto;
-    width:                          250px;
+    width:                          200px;
     height:                         40px;
     background:                     url("../gfx/separator.svg") no-repeat center center;
 }
@@ -214,6 +222,9 @@ p {
     margin-bottom:                  20px;
     border:                         4px solid rgb(255,255,255);
     border-radius:                  4px;
+}
+.slot a {
+    text-decoration:                none;
 }
 .slot .img {
     width:                          100%;

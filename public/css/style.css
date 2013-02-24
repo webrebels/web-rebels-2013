@@ -52,7 +52,6 @@ table {
     border-collapse:                collapse;
     width:                          100%;
     margin-bottom:                  20px;
-    border-bottom:                  1px solid rgb(140, 140, 140);
 }
 th {
     font-family:                    'Asap', sans-serif;
@@ -152,7 +151,8 @@ td ul {
 }
 .foot aside a,
 .foot aside a:visited {
-    float:                          right;
+    display:                        block;
+    text-align:                     right;
     text-decoration:                none;
     color:                          rgb(140, 140, 140);
 }
@@ -164,8 +164,6 @@ td ul {
     height:                         100px;
     margin:                         0 5px 10px 5px;
     border-radius:                  4px;
-
-
 }
 .sponsor.kodemaker {
     background:                     url("/gfx/sponsors/sponsor-kodemaker.png") no-repeat center center;
@@ -368,44 +366,51 @@ td ul {
 
 
 @media screen and (max-width: 720px) {
-    .page .logo, .page .menu, .page .wrap, .page .foot {
-        width: auto;
-    }
-    .row_a, .row_b, .row_c, .row_d {
-        margin-right: 0;
-        margin-left: 0;
-    }
-    .row_a:nth-child(odd), .row_b:nth-child(odd), .row_c:nth-child(odd) {
-        margin-left: 13%;
-        margin-right: 20px;
-    }
-    .schedule {
-        width: auto;
-    }
-    .menu .right a:nth-child(3) {
-        padding-right: 45px;
+ 
+    /* Wrapper for sections in a page */
+    .logo,
+    .menu,
+    .wrap,
+    .footContainer {
+        width:                          90%;
+        margin:                         5% auto;
     }
 
-    .half {
-        width: auto;
+    /* Do not show tba speakers. Just eats space on a small device */
+    .tba {
+        display:                        none;
     }
 
-    img {
-        max-width: 100%;
+    .row_a,
+    .row_b,
+    .row_c,
+    .row_d {
+        float:                          none;
+        margin-left:                    auto;
+        margin-right:                   auto;
+        margin-bottom:                  20px;
     }
 
-    .fullWidthImg {
-        height: auto;
+    .foot section {
+        overflow:                       hidden;
+        float:                          none;
+        width:                          100%;
+        border-right:                   none;
+        border-bottom:                  none;
     }
-}
-@media screen and (max-width: 480px) {
-    .poster {
-        background-position-x: -140px;
+    .foot aside {
+        float:                          default;
+        width:                          100%;
+        text-align:                     center;
     }
-    .row_a, .row_b, .row_c, .row_d {
-        margin-right: 0;
-        margin-left: 10% !important;
+    
+    .foot aside a,
+    .foot aside a:visited {
+        margin-right:                   5px;
+        margin-left:                    5px;
+        display:                        inline;
     }
+
 }
 
 #surprompen {

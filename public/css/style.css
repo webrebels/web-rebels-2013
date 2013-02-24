@@ -364,55 +364,94 @@ td ul {
 }
 
 
+@media screen and (max-device-width: 720px) {
 
-@media screen and (max-width: 720px) {
- 
     /* Wrapper for sections in a page */
     .logo,
     .menu,
     .wrap,
     .footContainer {
-        width:                          90%;
-        margin:                         5% auto;
+        width:                      90%;
+        margin:                     5% auto;
     }
 
     /* Do not show tba speakers. Just eats space on a small device */
     .tba {
-        display:                        none;
+        display:                    none;
     }
 
     .row_a,
     .row_b,
     .row_c,
     .row_d {
-        float:                          none;
-        margin-left:                    auto;
-        margin-right:                   auto;
-        margin-bottom:                  20px;
+        float:                      none;
+        margin-left:                auto;
+        margin-right:               auto;
+        margin-bottom:              20px;
+    }
+    .slot:nth-child(odd){
+        float:                      left;
+    }
+    .slot:nth-child(even){
+        float:                      right;
     }
 
+
     .foot section {
-        overflow:                       hidden;
-        float:                          none;
-        width:                          100%;
-        border-right:                   none;
-        border-bottom:                  none;
+        overflow:                   hidden;
+        float:                      none;
+        width:                      100%;
+        border-right:               none;
+        border-bottom:              none;
     }
     .foot aside {
-        float:                          default;
-        width:                          100%;
-        text-align:                     center;
+        float:                      default;
+        width:                      100%;
+        text-align:                 center;
     }
     
     .foot aside a,
     .foot aside a:visited {
-        margin-right:                   5px;
-        margin-left:                    5px;
-        display:                        inline;
+        margin-right:               5px;
+        margin-left:                5px;
+        display:                    inline;
+    }
+
+    /* Frontpage */
+    .poster {
+        height:                     auto;
+    }
+    .poster h1,
+    .poster h2,
+    .poster h3 {
+        position:                   relative;
+        top:                        auto;
+        text-align:                 center;
+        right:                      0;
+        padding:                    0 0;
+        background-color:           rgba(0,0,0,0);
+    }
+    .poster h1 {
+        font-size:                  1.6em;
+    }
+    .poster h2 {
+        font-size:                  1.225em;
+    }
+    .poster h3 {
+        font-size:                  1.025em;
     }
 
 }
 
+
+@media screen and (max-device-width: 479px) {
+    .slot:nth-child(odd),
+    .slot:nth-child(even) {
+        float:                      none;
+    }
+}
+
+
 #surprompen {
-    display: none;
+    display:                        none;
 }

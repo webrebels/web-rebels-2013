@@ -185,7 +185,10 @@ td ul {
     background:                     url("/gfx/sponsors/sponsor-comoyo.png") no-repeat center center;
     background-color:               rgb(255, 255, 255);
 }
-
+.sponsor.knowit {
+    background:                     url("/gfx/sponsors/sponsor-knowit.png") no-repeat center center;
+    background-color:               rgb(255, 255, 255);
+}
 /* Frontpage */
 .poster {
     position:                       relative;

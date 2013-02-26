@@ -181,7 +181,10 @@ td ul {
     background:                     url("/gfx/sponsors/sponsor-bekk.png") no-repeat center center;
     background-color:               rgb(255, 255, 255);
 }
-
+.sponsor.comoyo {
+    background:                     url("/gfx/sponsors/sponsor-comoyo.png") no-repeat center center;
+    background-color:               rgb(255, 255, 255);
+}
 
 /* Frontpage */
 .poster {

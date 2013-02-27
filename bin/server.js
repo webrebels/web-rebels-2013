@@ -1,28 +1,81 @@
 var http                = require('http'),
     express             = require('express'),
+    WebSocket           = require('ws'),
 
     port                = process.argv[2] ? process.argv[2] : 8000,
     docRoot             = './public',
+    ircHost             = (process.env.NODE_ENV === 'production') ? 'wrirc.jit.su' : 'localhost:8100',
 
     app                 = express(),
-    httpServer          = http.createServer(app);
+    httpServer          = http.createServer(app),
+
+    ircLog              = '{"type":"unknown"}',
+    ircClient           = new WebSocket('ws://' + ircHost + '/chat'),
+    wsServer            = new WebSocket.Server({
+        server:  httpServer,
+        path : '/stream',
+        disableHixie : true
+    });
+
+
+
+// Broadcast message to all connected websocket clients
+
+function broadcast(socket, msg) {
+    var i = socket.clients.length;
+    while(i--){
+        socket.clients[i].send(msg);
+    }
+}
+
+
+
+// Handle ws connections
+
+wsServer.on('connection', function(ws) {
+    var slp = setTimeout(function(){
+        ws.send(ircLog);
+    }, 100)
+});
+
+
+
+// Handle updates from IRC server
+
+ircClient.on('message', function(msg) {
+    var obj = JSON.parse(msg);
+
+    if (obj.type === 'irc:log') {
+        ircLog = msg;
+    };
+
+    if (obj.type === 'irc:update') {
+        broadcast(wsServer, msg);
+    };
+});
 
 
 
 // Configure application
 
 app.disable('x-powered-by');
-app.use(express.static(docRoot));
 
 app.configure('all',function () {
     app.use(express.compress());
+    app.use(express.static(docRoot));
 });
+
+
+
+// Set templating engine
 
 app.set('views', 'views');
 app.set('view engine', 'ejs');
 
 
-// Start http server
+
+// Set http routes
+
 app.get('/', function(req, res){
 	res.render('frontpage', { pageTitle: 'Web Rebels ☠ Oslo ☠ 2013' });
 });
@@ -53,8 +106,14 @@ app.get('/schedule', function(req,res){
 app.get('/speakers', function(req,res){
     res.render('speakers', {pageTitle: 'Speakers - Web Rebels ☠ Oslo 2013'})
 });
+
+
+
+// Start http server
+
 httpServer.listen(port);
 console.info('WR2013 is running at http://localhost:' + port + '/');
+
 
 
 // Prevent exceptions to bubble up to the top and eventually kill the server

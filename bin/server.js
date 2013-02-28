@@ -110,7 +110,9 @@ app.get('/schedule', function(req,res){
 app.get('/speakers', function(req,res){
     res.render('speakers', {pageTitle: 'Speakers - Web Rebels ☠ Oslo 2013'});
 });
-
+app.get('/roadbook', function(req,res){
+    res.render('roadbook', {pageTitle: 'Speakers Roadbook - Web Rebels ☠ Oslo 2013'});
+});
 
 
 // Start http server

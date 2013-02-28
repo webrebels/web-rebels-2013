@@ -74,6 +74,14 @@ td ul {
     margin-left:                    4px;
 }
 
+.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
 
 /* Wrapper for sections in a page */
 .logo,
@@ -371,6 +379,31 @@ td ul {
     margin-bottom:                  5px;
 }
 
+/* Chat function */
+#chat {
+    display:                        block;
+    overflow:                       hidden;
+    height:                         250px;
+    background-color:               rgb(255,255,255);
+    border:                         4px solid rgb(255,255,255);
+    border-radius:                  4px;
+    list-style:                     none;
+    padding:                        0;
+}
+#chat li{
+    overflow:                       hidden;
+    padding:                        4px;
+}
+#chat li:nth-child( even ) {
+    background-color:               rgb(250,250,245);
+}
+#chat li:nth-child( odd ) {
+    background-color:               rgb(242,242,235);
+}
+#chat .user {
+    margin-right:                   10px;
+}
+
 
 @media screen and (max-device-width: 720px) {
 
@@ -417,7 +450,7 @@ td ul {
         width:                      100%;
         text-align:                 center;
     }
-    
+
     .foot aside a,
     .foot aside a:visited {
         margin-right:               5px;

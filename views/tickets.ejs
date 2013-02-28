@@ -1,57 +1,65 @@
 <!doctype html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
-    <link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/style.css">
-    <title><%=pageTitle%></title>
-    <% include snips/analytics.ejs %>
-</head>
-<body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+        <link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/css/style.css">
+        <title><%=pageTitle%></title>
+        <% include snips/analytics.ejs %>
+    </head>
+    <body>
 
-  <% include snips/logo.ejs %>
-  <% include snips/menu.ejs %>
+        <% include snips/logo.ejs %>
+        <% include snips/menu.ejs %>
 
-    <article class="wrap">
-        <h1>Tickets</h1>
-        <p>Early Rebel tickets will go on sale Friday 1st of March at 14:00 GMT (15:00 Norwegian time)!</p>
+        <article class="wrap">
 
-        <div style="width:100%; text-align:left;" ><iframe  src="http://www.eventbrite.com/tickets-external?eid=3153505219&ref=etckt&v=2" frameborder="0" height="200" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe></div>
+            <h1>Tickets</h1>
+            <p>Early Rebel tickets will go on sale Friday 1st of March at 14:00 GMT (15:00 Norwegian time)!</p>
 
-        <h2>This is included in your ticket</h2>
-        <p>
-          When you attend the Web Rebels Conference, you're our guest
-          and we will take care of you. We work very hard to make sure
-          all you need to do is to get here and then we'll do all the
-          rest.
-        </p>
+            <div style="width:100%; text-align:left;" ><iframe  src="http://www.eventbrite.com/tickets-external?eid=3153505219&ref=etckt&v=2" frameborder="0" height="200" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe></div>
 
-        <p>Your ticket entitles you to:</p>
+            <div class="separator"></div>
 
-        <ul>
-          <li>Entrance to the conference</li>
-          <li>Entrance to the <a href="/openmic">Open Mic Night</a></li>
-          <li>Full buffet breakfast both conference days</li>
-          <li>Full lunch both conference days</li>
-          <li>Full dinner day one of the conference</li>
-          <li>Continuous delivery of coffee / tea during the conference</li>
-          <li>Access to the conference party at the end of day one</li>
-          <li>A decent amount of free beverages (beer, wine, mineralwater) during the conference party</li>
-        </ul>
-        
-        <p>
-          We know that our speakers will be great and you will not go hungry during the
-          conference. 
-        </p>
-        <p>
-          We put pride in making sure you have the best entertainment during
-          the after party and access to a good selection of micro brewery beers (just checkout the <a href="http://webrebels.tumblr.com/post/24346798911/were-doing-the-accounting-thing-these-days-and">selection of beverages consumed at last years party</a>) too choose from.
-        </p>
+            <h2>This is included in your ticket</h2>
+            <p>
+                When you attend the Web Rebels Conference, you're our guest and we will take care of you. We work very hard to make sure all you need to do is to get here and then we'll do all the rest.
+            </p>
 
-    </article>
+            <p>Your ticket entitles you to:</p>
 
-    <% include snips/footer.ejs %>
+            <ul>
+                <li>Entrance to the conference</li>
+                <li>Entrance to the <a href="/openmic">Open Mic Night</a></li>
+                <li>Full buffet breakfast both conference days</li>
+                <li>Full lunch both conference days</li>
+                <li>Full dinner day one of the conference</li>
+                <li>Continuous delivery of coffee / tea during the conference</li>
+                <li>Access to the conference party at the end of day one</li>
+                <li>A decent amount of free beverages (beer, wine, mineralwater) during the conference party</li>
+            </ul>
 
-</body>
+            <p>
+                We know that our speakers will be great and you will not go hungry during the conference. 
+            </p>
+            <p>
+                We put pride in making sure you have the best entertainment during the after party and access to a good selection of micro brewery beers (just checkout the <a href="http://webrebels.tumblr.com/post/24346798911/were-doing-the-accounting-thing-these-days-and">selection of beverages consumed at last years party</a>) too choose from.
+            </p>
+
+            <div class="separator"></div>
+            
+            <h2>Chat with us!</h2>
+            <p>
+                Come and hang out with us on irc. We're at <strong>#webrebels</strong> at <strong>irc.freenode.net</strong>.
+            </p>
+            
+            <ul id="chat" class="hidden"></ul>
+
+        </article>
+
+        <% include snips/footer.ejs %>
+        <script src="/js/streams.js"></script>
+
+    </body>
 </html>

@@ -1,3 +1,7 @@
+/*jshint es5:true node:true*/
+
+"use strict";
+
 var http                = require('http'),
     express             = require('express'),
     WebSocket           = require('ws'),
@@ -35,7 +39,7 @@ function broadcast(socket, msg) {
 wsServer.on('connection', function(ws) {
     var slp = setTimeout(function(){
         ws.send(ircLog);
-    }, 100)
+    }, 100);
 });
 
 
@@ -47,11 +51,11 @@ ircClient.on('message', function(msg) {
 
     if (obj.type === 'irc:log') {
         ircLog = msg;
-    };
+    }
 
     if (obj.type === 'irc:update') {
         broadcast(wsServer, msg);
-    };
+    }
 });
 
 
@@ -80,31 +84,31 @@ app.get('/', function(req, res){
 	res.render('frontpage', { pageTitle: 'Web Rebels ☠ Oslo ☠ 2013' });
 });
 app.get('/sponsors', function(req,res){
-	res.render('sponsors', {pageTitle: 'Our sponsors without whom none of this would be possible ☠ Web Rebels ☠ Oslo 2013'})
+	res.render('sponsors', {pageTitle: 'Our sponsors without whom none of this would be possible ☠ Web Rebels ☠ Oslo 2013'});
 });
 app.get('/sponsoroptions', function(req,res){
-    res.render('sponsoroptions', {pageTitle: 'Sponsoring options for the Web Rebels ☠ Oslo 2013'})
+    res.render('sponsoroptions', {pageTitle: 'Sponsoring options for the Web Rebels ☠ Oslo 2013'});
 });
 app.get('/about', function(req,res){
-	res.render('about', {pageTitle: '☠ About the Web Rebels ☠'})
+	res.render('about', {pageTitle: '☠ About the Web Rebels ☠'});
 });
 app.get('/tickets', function(req,res){
-    res.render('tickets', {pageTitle: 'Tickets for the Web Rebels ☠ Oslo 2013'})
+    res.render('tickets', {pageTitle: 'Tickets for the Web Rebels ☠ Oslo 2013'});
 });
 app.get('/ticketConfirmation', function(req,res){
-    res.render('ticketConfirmation', {pageTitle: 'Thank you for registering with the Web Rebels ☠ Oslo 2013'})
+    res.render('ticketConfirmation', {pageTitle: 'Thank you for registering with the Web Rebels ☠ Oslo 2013'});
 });
 app.get('/location', function(req,res){
-	res.render('location', {pageTitle: 'Location of the Web Rebels ☠ Oslo 2013'})
+	res.render('location', {pageTitle: 'Location of the Web Rebels ☠ Oslo 2013'});
 });
 app.get('/openmic', function(req,res){
-	res.render('openmic', {pageTitle: 'Open Mic Night - Web Rebels ☠ Oslo 2013'})
+	res.render('openmic', {pageTitle: 'Open Mic Night - Web Rebels ☠ Oslo 2013'});
 });
 app.get('/schedule', function(req,res){
-    res.render('schedule', {pageTitle: 'Schedule for Web Rebels ☠ Oslo 2013'})
+    res.render('schedule', {pageTitle: 'Schedule for Web Rebels ☠ Oslo 2013'});
 });
 app.get('/speakers', function(req,res){
-    res.render('speakers', {pageTitle: 'Speakers - Web Rebels ☠ Oslo 2013'})
+    res.render('speakers', {pageTitle: 'Speakers - Web Rebels ☠ Oslo 2013'});
 });
 
 

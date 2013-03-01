@@ -199,6 +199,11 @@ td ul {
     background-size:                80%;
     background-color:               rgb(255, 255, 255);
 }
+.sponsor.bouvet {
+    background:                     url("/gfx/sponsors/sponsor-bouvet.png") no-repeat center center;
+    background-size:                80%;
+    background-color:               rgb(255, 255, 255);
+}
 /* Frontpage */
 .poster {
     position:                       relative;

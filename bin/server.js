@@ -39,9 +39,24 @@ function broadcast(socket, msg) {
 wsServer.on('connection', function(ws) {
     var slp = setTimeout(function(){
         ws.send(ircLog);
-    }, 100);
+    }, 80);
 });
 
+
+
+// Irc Client status messages
+
+ircClient.on('open', function() {
+    console.log('Connected to irc bot');
+});
+
+ircClient.on('close', function(e) {
+    console.log('Closed connected to irc bot!');
+});
+
+ircClient.on('error', function(e) {
+    console.log('Closed connected to irc bot due to error!');
+});
 
 
 // Handle updates from IRC server

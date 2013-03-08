@@ -19,7 +19,7 @@ env: {
     httpServerPort: {
         doc     : "The port the server should bind to",
         format  : "port",
-        default : 9602,
+        default : 8000,
         env     : "NODE_HTTP_SERVER_PORT"
     },
 

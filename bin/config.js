@@ -2,7 +2,8 @@
 
 "use strict";
 
-var convict = require('convict');
+var convict = require('convict'),
+    pckage  = require('../package.json');
 
 
 // Configuration schema
@@ -14,6 +15,13 @@ env: {
         format  : ["development", "production"],
         default : "development",
         env     : "NODE_ENV"
+    },
+
+    version: {
+        doc     : "Version of the application",
+        format  : "*",
+        default : pckage.version,
+        env     : "NODE_VERSION"
     },
 
     httpServerPort: {
@@ -61,7 +69,7 @@ env: {
     logFileFileName: {
         doc     : "Which file the file transport log should log to",
         format  : "*",
-        default : './logs/web-rebels-2013.log',
+        default : "./logs/" + pckage.name + ".log",
         env     : "NODE_LOG_FILE_FILE_NAME"
     },
 
@@ -84,6 +92,7 @@ env: {
 
 
 // Load and validate configuration depending on environment
+
 var env = conf.get('env');
 conf.loadFile('./config/' + env + '.json');
 conf.validate();
@@ -91,4 +100,5 @@ conf.validate();
 
 
 // Export merged configuration to the application
+
 module.exports = conf;

@@ -1,0 +1,6 @@
+{
+    "logConsoleLevel"   : "error",
+    "logFileLevel"      : "error",
+    "ircServer"         : "wrirc.jit.su",
+    "ircServerPort"     : 80
+}

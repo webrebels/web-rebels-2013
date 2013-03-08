@@ -2,24 +2,43 @@
 
 "use strict";
 
-var http                = require('http'),
+var config              = require('./config.js'),
+    http                = require('http'),
+    winston             = require('winston'),
     express             = require('express'),
     WebSocket           = require('ws'),
-
-    port                = process.argv[2] ? process.argv[2] : 8000,
-    docRoot             = './public',
-    ircHost             = (process.env.NODE_ENV === 'production') ? 'wrirc.jit.su' : 'localhost:8100',
 
     app                 = express(),
     httpServer          = http.createServer(app),
 
     ircLog              = '{"type":"unknown"}',
-    ircClient           = new WebSocket('ws://' + ircHost + '/chat'),
+    ircClient           = new WebSocket('ws://' + config.get('ircServer') + ':' + config.get('ircServerPort') + '/chat'),
     wsServer            = new WebSocket.Server({
         server:  httpServer,
         path : '/stream',
         disableHixie : true
     });
+
+
+
+// Set up logger
+
+var log = new (winston.Logger)({
+    exitOnError : false,
+    transports  : [
+        new (winston.transports.Console)({
+            silent              : config.get('logConsoleSilent'),
+            level               : config.get('logConsoleLevel')
+        }),
+
+        new (winston.transports.File)({
+            filename            : config.get('logFileFileName'),
+            silent              : config.get('logFileSilent'),
+            level               : config.get('logFileLevel'),
+            handleExceptions    : true
+        })
+    ]
+});
 
 
 
@@ -47,15 +66,15 @@ wsServer.on('connection', function(ws) {
 // Irc Client status messages
 
 ircClient.on('open', function() {
-    console.log('Connected to irc bot');
+    log.info('Connected to irc bot');
 });
 
 ircClient.on('close', function(e) {
-    console.log('Closed connected to irc bot!');
+    log.info('Closed connected to irc bot!');
 });
 
 ircClient.on('error', function(e) {
-    console.log('Closed connected to irc bot due to error!');
+    log.error('Closed connected to irc bot due to error!');
 });
 
 
@@ -81,7 +100,7 @@ app.disable('x-powered-by');
 
 app.configure('all',function () {
     app.use(express.compress());
-    app.use(express.static(docRoot));
+    app.use(express.static(config.get('docRoot')));
 });
 
 
@@ -130,15 +149,17 @@ app.get('/roadbook', function(req,res){
 });
 
 
+
 // Start http server
 
-httpServer.listen(port);
-console.info('WR2013 is running at http://localhost:' + port + '/');
+httpServer.listen(config.get('httpServerPort'));
+log.info('WR2013 is running at http://localhost:' + config.get('httpServerPort') + '/');
+log.info('Serving documents from ' + config.get('docRoot'));
 
 
 
 // Prevent exceptions to bubble up to the top and eventually kill the server
 
 process.on("uncaughtException", function (err) {
-    console.warn(err.stack);
+    log.error(err.stack);
 });

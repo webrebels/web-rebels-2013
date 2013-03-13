@@ -139,6 +139,9 @@ td ul {
 .menu a:hover {
     color:                          rgb(0,0,0);
 }
+.borderlessMenu {
+    border:                         0;
+}
 
 
 /* Footer at the bottom of each page */

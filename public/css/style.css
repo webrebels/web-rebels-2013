@@ -339,10 +339,12 @@ td ul {
 
 
 /* Speakers page */
-.speaker {
+.speaker,
+.place {
     overflow:                       hidden;
 }
-.speaker img {
+.speaker img,
+.place img {
     float:                          left;
     margin-right:                   20px;
 }

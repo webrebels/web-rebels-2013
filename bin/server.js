@@ -135,6 +135,9 @@ app.get('/ticketConfirmation', function(req,res){
 app.get('/location', function(req,res){
 	res.render('location', {pageTitle: 'Location of the Web Rebels ☠ Oslo 2013'});
 });
+app.get('/oslo', function(req,res){
+    res.render('oslo', {pageTitle: 'Oslo survival guide for Web Rebels ☠ Oslo 2013'});
+});
 app.get('/openmic', function(req,res){
 	res.render('openmic', {pageTitle: 'Open Mic Night - Web Rebels ☠ Oslo 2013'});
 });

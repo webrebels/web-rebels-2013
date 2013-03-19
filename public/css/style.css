@@ -209,6 +209,11 @@ td ul {
     background-size:                80%;
     background-color:               rgb(255, 255, 255);
 }
+.sponsor.computas {
+    background:                     url("/gfx/sponsors/sponsor-computas.png") no-repeat center center;
+    background-size:                80%;
+    background-color:               rgb(255, 255, 255);
+}
 /* Frontpage */
 .poster {
     position:                       relative;

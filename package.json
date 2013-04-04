@@ -1,6 +1,10 @@
 {
   "name": "web-rebels-2013",
+<<<<<<< HEAD
   "version": "0.0.1-48",
+=======
+  "version": "0.0.1-46",
+>>>>>>> adding github as a sponsor
   "author": {
     "name": "Web Rebels",
     "email": "kontor@webrebels.org"

@@ -206,7 +206,7 @@ td ul {
 }
 .sponsor.microsoft {
     background:                     url("/gfx/sponsors/sponsor-microsoft.png") no-repeat center center;
-    background-size:                80%;
+    /*background-size:                80%;*/
     background-color:               rgb(255, 255, 255);
 }
 .sponsor.computas {

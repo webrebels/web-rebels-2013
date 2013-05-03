@@ -164,7 +164,12 @@ td ul {
     text-decoration:                none;
     color:                          rgb(140, 140, 140);
 }
-
+.sponsors.premium a{
+	width:							176px;
+}
+.sponsors.premium {
+	padding-bottom:					20px;
+}
 .sponsors a {
     display:                        block;
     float:                          left;

@@ -466,6 +466,17 @@ td ul {
 }
 
 
+/* Roadbook */
+.routes .speaker {
+    background-color:               rgb(140, 140, 140);
+}
+.routes .inbound,
+.routes .outbound,
+.routes .accommodation {
+    background-color:               transparent;
+}
+
+
 @media screen and (max-device-width: 720px) {
 
     /* Wrapper for sections in a page */

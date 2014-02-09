@@ -1,0 +1,575 @@
+* {
+    -webkit-tap-highlight-color:    rgba(0,0,0,0);
+    -webkit-box-sizing:             border-box;
+    -moz-box-sizing:                border-box;
+    box-sizing:                     border-box;
+}
+
+/* Normalizing elements */
+body, menu, h1, h2, h3, a, section, aside, menu, div, p, ul, li {
+    margin:                         0;
+    padding:                        0;
+}
+
+ul {
+    list-style:                     disc;
+    padding:                        0 2em 1em 2em;
+}
+
+
+/* Global styles */
+body {
+    font:                           100% sans-serif;                                                    /* ~16px; */
+    line-height:                    1.5;
+    -webkit-text-size-adjust:       none;
+    background:                     url(../gfx/bg.png) repeat-x 0 0,url(../gfx/bg-sand.png) repeat 0 0,#f5f1e8;
+}
+
+h1, h2, h3 {
+    font-family:                    'Asap', sans-serif;
+}
+h1 {
+    font-size:                      1.675em;
+}
+h2 {
+    font-size:                      1.425em;
+}
+h3 {
+    font-size:                      1.075em;
+}
+p {
+    margin-bottom:                  20px;
+}
+
+a {
+    color:                          rgb(138,138,76);
+}
+a:visited {
+    color:                          rgb(0,0,0);
+}
+
+table {
+    border-collapse:                collapse;
+    width:                          100%;
+    margin-bottom:                  20px;
+}
+th {
+    font-family:                    'Asap', sans-serif;
+    background-color:               rgb(202,202,174);
+    text-align:                     left;
+}
+tr:nth-child( even ) {
+    background-color:               rgb(242,242,235);
+
+}
+tr:nth-child( odd ) {
+    background-color:               rgb(250,250,245);
+}
+td, th {
+    padding:                        10px;
+    vertical-align:                 top;
+}
+td ul {
+    list-style:                     disc;
+    margin-left:                    4px;
+}
+
+.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Wrapper for sections in a page */
+.logo,
+.menu,
+.wrap,
+.footContainer {
+    overflow:                       hidden;
+    width:                          680px;
+    margin:                         20px auto;
+}
+
+
+/* Separator with shull */
+.separator {
+    margin:                         20px auto;
+    width:                          200px;
+    height:                         40px;
+    background:                     url("../gfx/separator.svg") no-repeat center center;
+}
+
+
+/* General map and image box styles */
+.imageFrame {
+    overflow:                       hidden;
+    display:                        block;
+    background-color:               rgb(255,255,255);
+    border:                         4px solid rgb(255,255,255);
+    border-radius:                  4px;
+}
+
+
+/* Logo at the top of the page */
+.logo {
+    height:                         120px;
+    background:                     url("../gfx/wr_logo.svg") no-repeat top center;
+}
+
+
+/* Menu at the top of the page */
+.menu {
+    padding:                        5px 0;
+    border-top:                     1px solid rgb(140, 140, 140);
+    border-bottom:                  1px solid rgb(140, 140, 140);
+    text-align:                     center;
+}
+
+.menu a {
+    margin:                         0 5px;
+    text-decoration:                none;
+    font-family:                    'Asap', sans-serif;
+    color:                          rgb(72, 72, 72);
+    text-shadow:                    rgba(255, 255, 255, 0.74902) 0px 1px 0px;
+}
+
+.menu a:hover {
+    color:                          rgb(0,0,0);
+}
+.borderlessMenu {
+    border:                         0;
+}
+
+
+/* Footer at the bottom of each page */
+.foot {
+    overflow:                       hidden;
+    background-image:               url(../gfx/bg.jpg);
+    color:                          rgb(140, 140, 140);
+}
+
+.foot section {
+    float:                          left;
+    width:                          580px;
+    border-right:                   1px solid rgb(140, 140, 140);
+}
+.foot aside {
+    float:                          right;
+    width:                          100px;
+}
+.foot aside a,
+.foot aside a:visited {
+    display:                        block;
+    text-align:                     right;
+    text-decoration:                none;
+    color:                          rgb(140, 140, 140);
+}
+.sponsors.premium a{
+	width:							176px;
+}
+.sponsors.premium {
+	padding-bottom:					20px;
+}
+.sponsors a {
+    display:                        block;
+    float:                          left;
+    width:                          130px;
+    height:                         100px;
+    margin:                         0 5px 10px 5px;
+    border-radius:                  4px;
+}
+.sponsorLogo {
+    display:                        block;
+    border:                         1px solid rgb(180, 180, 180);
+    width:                          130px;
+    height:                         60px;
+    margin-bottom:                  5px;
+}
+.sponsor.kodemaker {
+    background:                     url("/gfx/sponsors/sponsor-kodemaker.png") no-repeat center center;
+    background-color:               rgb(255, 255, 255);
+}
+.sponsor.finn {
+    background:                     url("/gfx/sponsors/sponsor-finn.png") no-repeat center center;
+    background-color:               rgb(255, 255, 255);
+}
+.sponsor.arktekk {
+    background:                     url("/gfx/sponsors/sponsor-arktekk.png") no-repeat center center;
+    background-color:               rgb(255, 255, 255);
+}
+.sponsor.bekk {
+    background:                     url("/gfx/sponsors/sponsor-bekk.png") no-repeat center center;
+    background-color:               rgb(255, 255, 255);
+}
+.sponsor.comoyo {
+    background:                     url("/gfx/sponsors/sponsor-comoyo.png") no-repeat center center;
+    background-size:                80%;
+    background-color:               rgb(255, 255, 255);
+}
+.sponsor.knowit {
+    background:                     url("/gfx/sponsors/sponsor-knowit.png") no-repeat center center;
+    background-size:                80%;
+    background-color:               rgb(255, 255, 255);
+}
+.sponsor.bouvet {
+    background:                     url("/gfx/sponsors/sponsor-bouvet.png") no-repeat center center;
+    background-size:                80%;
+    background-color:               rgb(255, 255, 255);
+}
+.sponsor.microsoft {
+    background:                     url("/gfx/sponsors/sponsor-microsoft.png") no-repeat center center;
+    /*background-size:                80%;*/
+    background-color:               rgb(255, 255, 255);
+}
+.sponsor.computas {
+    background:                     url("/gfx/sponsors/sponsor-computas.png") no-repeat center center;
+    background-size:                80%;
+    background-color:               rgb(255, 255, 255);
+}
+.sponsor.amedia {
+    background:                     url("/gfx/sponsors/sponsor-amedia.png") no-repeat center center;
+    background-size:                80%;
+    background-color:               rgb(255, 255, 255);
+}
+.sponsor.couch {
+    background:                     url("/gfx/sponsors/sponsor-couch.png") no-repeat center center;
+    background-color:               rgb(255, 255, 255);
+    background-size:                80%;
+}
+.sponsor.github {
+     background:                     url("/gfx/sponsors/sponsor-github.png") no-repeat center center;
+     background-color:               rgb(255, 255, 255);
+     background-size:                80%;
+}
+
+.sponsorLogo.amedia {
+    background:                     url("/gfx/sponsors/sponsor-amedia.png") no-repeat center center;
+    background-size:                80%;
+    background-color:               rgb(255, 255, 255);
+}
+
+.sponsorLogo.comoyo {
+    background:                     url("/gfx/sponsors/sponsor-comoyo.png") no-repeat center center;
+    background-size:                80%;
+    background-color:               rgb(255, 255, 255);
+}
+.sponsorLogo.microsoft {
+    background:                     url("/gfx/sponsors/sponsor-microsoft.png") no-repeat center center;
+    background-size:                80%;
+    background-color:               rgb(255, 255, 255);
+}
+
+
+/* Frontpage */
+.poster {
+    position:                       relative;
+    height:                         350px;
+    border-radius:                  4px;
+}
+.poster h1,
+.poster h2,
+.poster h3 {
+    position:                       absolute;
+    right:                          0;
+    padding:                        0 10px;
+    background-color:               rgba(255,255,255,0.7);
+    text-shadow:                    rgba(255, 255, 255, 0.74902) 0px 1px 0px;
+}
+.poster h1 {
+    top:                            200px;
+    font-size:                      2em;
+}
+.poster h2 {
+    top:                            250px;
+    font-size:                      1.625em;
+}
+.poster h3 {
+    top:                            290px;
+    font-size:                      1.225em;
+}
+
+.slot {
+    position:                       relative;
+    overflow:                       hidden;
+    height:                         150px;
+    float:                          left;
+    background-color:               rgb(255,255,255);
+    margin-bottom:                  20px;
+    border:                         4px solid rgb(255,255,255);
+    border-radius:                  4px;
+}
+.slot a {
+    text-decoration:                none;
+}
+.slot .img {
+    width:                          100%;
+    height:                         142px;
+    background-repeat:              no-repeat;
+    background-position:            top center;
+}
+.slot a h2 {
+    position:                       absolute;
+    bottom:                         0;
+    height:                         40px;
+    padding:                        4px 0 0 8px;
+    width:                          100%;
+    font-size:                      1.076em;
+    background-color:               rgba(0,0,0,0.5);
+    color:                          rgb(255,255,255);
+}
+.row_a {
+    width:                          212px;
+    margin-right:                   10px;
+}
+.row_b {
+    width:                          214px;
+    margin:                         0 10px;
+}
+.row_c {
+    width:                          212px;
+    margin-left:                    10px;
+}
+.row_d {
+    width:                          214px;
+    margin-left:                    232px;
+}
+
+
+/* Speakers page */
+.speaker,
+.place {
+    overflow:                       hidden;
+}
+.speaker img,
+.place img {
+    float:                          left;
+    margin-right:                   20px;
+}
+
+
+/* Schedule page  */
+.schedule .time {
+    width:                          100px;
+}
+.schedule .title {
+    width:                          170px;
+}
+.schedule .additional {
+    line-height:                    22px;
+}
+
+
+
+.huge {
+    font-size: 250%;
+}
+.centrify {
+    text-align: center;
+}
+.fleft {
+    float:                          left;
+}
+.half {
+    width:                          50%;
+}
+.last {
+    clear:                          all;
+}
+
+.map {
+    height:                         500px;
+    width:                          100%;
+    overflow:                       hidden;
+}
+
+
+.images {
+    position:                       relative;
+    overflow:                       hidden;
+    height:                         500px;
+    width:                          100%;
+}
+
+.images img {
+    max-width:                      100%;
+}
+
+.images .arrow {
+    position:                       absolute;
+    font-size:                      30px;
+    line-height:                    15px;
+    color:                          white;
+    background-color:               black;
+    top:                            45%;
+    padding:                        10px;
+    text-decoration:                none;
+    width:                          40px;
+    height:                         40px;
+    border-radius:                  25px;
+    opacity:                        0.3;
+}
+
+.images .arrow:hover {
+    opacity:                        0.7;
+}
+
+.images .arrow.prev {
+    left:                           0;
+}
+
+.images .arrow.next {
+    right:                          0;
+}
+
+#locationTogler {
+    overflow:                       hidden;
+}
+
+.toglerButton {
+    overflow:                       hidden;
+    float:                          right;
+    margin-right:                   4px;
+    background-color:               rgb(255,255,255);
+    text-decoration:                none;
+    border-bottom-left-radius:      4px;
+    border-bottom-right-radius:     4px;
+}
+.toglerButton span {
+    display:                        block;
+    margin-left:                    10px;
+    margin-right:                   10px;
+    margin-top:                     5px;
+    margin-bottom:                  5px;
+}
+
+/* Chat function */
+#chat {
+    display:                        block;
+    overflow:                       hidden;
+    height:                         250px;
+    background-color:               rgb(255,255,255);
+    border:                         4px solid rgb(255,255,255);
+    border-radius:                  4px;
+    list-style:                     none;
+    padding:                        0;
+}
+#chat li{
+    overflow:                       hidden;
+    padding:                        4px;
+}
+#chat li:nth-child( even ) {
+    background-color:               rgb(250,250,245);
+}
+#chat li:nth-child( odd ) {
+    background-color:               rgb(242,242,235);
+}
+#chat .user {
+    margin-right:                   10px;
+}
+
+
+/* Roadbook */
+.routes .speaker {
+    background-color:               rgb(140, 140, 140);
+}
+.routes .inbound,
+.routes .outbound,
+.routes .accommodation {
+    background-color:               transparent;
+}
+
+
+@media screen and (max-device-width: 720px) {
+
+    /* Wrapper for sections in a page */
+    .logo,
+    .menu,
+    .wrap,
+    .footContainer {
+        width:                      90%;
+        margin:                     5% auto;
+    }
+
+    /* Do not show tba speakers. Just eats space on a small device */
+    .tba {
+        display:                    none;
+    }
+
+    .row_a,
+    .row_b,
+    .row_c,
+    .row_d {
+        float:                      none;
+        margin-left:                auto;
+        margin-right:               auto;
+        margin-bottom:              20px;
+    }
+    .slot:nth-child(odd){
+        float:                      left;
+    }
+    .slot:nth-child(even){
+        float:                      right;
+    }
+
+
+    .foot section {
+        overflow:                   hidden;
+        float:                      none;
+        width:                      100%;
+        border-right:               none;
+        border-bottom:              none;
+    }
+    .foot aside {
+        float:                      default;
+        width:                      100%;
+        text-align:                 center;
+    }
+
+    .foot aside a,
+    .foot aside a:visited {
+        margin-right:               5px;
+        margin-left:                5px;
+        display:                    inline;
+    }
+
+    /* Frontpage */
+    .poster {
+        height:                     auto;
+    }
+    .poster h1,
+    .poster h2,
+    .poster h3 {
+        position:                   relative;
+        top:                        auto;
+        text-align:                 center;
+        right:                      0;
+        padding:                    0 0;
+        background-color:           rgba(0,0,0,0);
+    }
+    .poster h1 {
+        font-size:                  1.6em;
+    }
+    .poster h2 {
+        font-size:                  1.225em;
+    }
+    .poster h3 {
+        font-size:                  1.025em;
+    }
+
+}
+
+
+@media screen and (max-device-width: 479px) {
+    .slot:nth-child(odd),
+    .slot:nth-child(even) {
+        float:                      none;
+    }
+}
+
+
+#surprompen {
+    display:                        none;
+}

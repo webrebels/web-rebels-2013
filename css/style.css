@@ -592,6 +592,6 @@ td ul {
 .menu-item a {
     display: block;
     padding: .75em 1em .5em;
-    color: #fff;
+    color: #000;
     text-decoration: none;
 }
